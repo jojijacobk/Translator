@@ -98,7 +98,6 @@ function Speech() {
     this.interimTranscript = ''; // speech recognition settings
 
     this.recognition.continuous = true;
-    this.recognition.interimResults = true;
     this.language = config.speechTranslator.defaultSrcLang.code;
 
     this.startSpeechCapture = function startSpeechCapture() {
@@ -137,11 +136,7 @@ function Speech() {
 
       for (var i = event.resultIndex; i < event.results.length; ++i) {
         if (event.results[i].isFinal) {
-          // this.finalTranscript = event.results[i][0].transcript;
-          console.log(event.results[i][0].transcript);
-        } else {
           this.finalTranscript = event.results[i][0].transcript;
-          this.recognition.start();
         }
       }
 
