@@ -1,5 +1,10 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -43,6 +48,8 @@ var config = {
   }
 
 };
+var _default = config;
+exports["default"] = _default;
 
 function translator(yourText, destination, url, callback) {
   var xhr = new XMLHttpRequest();
@@ -91,7 +98,8 @@ function translator(yourText, destination, url, callback) {
 
 function Speech() {
   if ('webkitSpeechRecognition' in window) {
-    this.recognition = new webkitSpeechRecognition(); // custom settings
+    this.recognition = new webkitSpeechRecognition();
+    console.log('webkitSpeechRecognition is available.'); // custom settings
 
     this.recognizing = false;
     this.finalTranscript = '';
@@ -101,17 +109,21 @@ function Speech() {
     this.language = config.speechTranslator.defaultSrcLang.code;
 
     this.startSpeechCapture = function startSpeechCapture() {
+      console.log('startSpeechCapture');
+
       if (this.recognizing) {
         this.recognition.stop();
         this.recognizing = false;
       }
 
+      console.log("initiate language change from - ".concat(this.recognition.lang, " to ").concat(this.lang));
       this.recognition.lang = this.language;
       this.recognition.start();
       this.recognizing = true;
     };
 
     this.stopSpeechCapture = function stopSpeechCapture() {
+      console.log('stopSpeechCapture');
       this.recognizing = false;
       this.recognition.stop();
     };
@@ -122,12 +134,16 @@ function Speech() {
 
     this.recognition.onend = function endSpeechRecognition(event) {
       // if recognition is ended because of idle time, resume recognition. We want to end recognition only if it is explicitly stopped by user.
+      console.log('end...');
+
       if (this.recognizing) {
         this.recognition.start();
       }
     };
 
     this.recognition.onresult = function speechRecognitionResult(event) {
+      console.log('result');
+
       if (_typeof(event.results) === undefined) {
         console.log('Undefined results'); // this.stopSpeechCapture();
 
@@ -162,8 +178,6 @@ function Speech() {
     this.recognition.onerror = function speechRecognitionError(event) {
       console.log(event.error);
     };
-
-    console.log('webkitSpeechRecognition is available.');
   } else {
     console.log('webkitSpeechRecognition is not available.');
   }
