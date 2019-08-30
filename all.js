@@ -1,10 +1,5 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -24,6 +19,7 @@ function gtag() {
 gtag('js', new Date());
 gtag('config', 'UA-145827690-1');
 var config = {
+  maxCharactersPerTranslation: 1500,
   txtTranslator: {
     defaultSrcLang: {
       code: 'en'
@@ -48,8 +44,6 @@ var config = {
   }
 
 };
-var _default = config;
-exports["default"] = _default;
 
 function translator(yourText, destination, url, callback) {
   var xhr = new XMLHttpRequest();
@@ -97,7 +91,11 @@ function translator(yourText, destination, url, callback) {
 })();
 
 function Speech() {
+  var _this = this;
+
   if ('webkitSpeechRecognition' in window) {
+    console.assert(this.constructor.name, 'Speech', 'Error: this is not Speech');
+    console.dir(this);
     this.recognition = new webkitSpeechRecognition();
     console.log('webkitSpeechRecognition is available.'); // custom settings
 
@@ -108,40 +106,53 @@ function Speech() {
     this.recognition.continuous = true;
     this.language = config.speechTranslator.defaultSrcLang.code;
 
-    this.startSpeechCapture = function startSpeechCapture() {
+    this.startSpeechCapture = function () {
+      console.assert(_this.constructor.name === 'Speech', 'Expected Speech object but "this" failed ');
       console.log('startSpeechCapture');
 
-      if (this.recognizing) {
-        this.recognition.stop();
-        this.recognizing = false;
+      if (_this.recognizing) {
+        _this.recognition.stop();
+
+        _this.recognizing = false;
       }
 
-      console.log("initiate language change from - ".concat(this.recognition.lang, " to ").concat(this.lang));
-      this.recognition.lang = this.language;
-      this.recognition.start();
-      this.recognizing = true;
+      console.log("initiate language change from - ".concat(_this.recognition.lang, " to ").concat(_this.language));
+      _this.recognition.lang = _this.language;
+
+      _this.recognition.start();
+
+      _this.recognizing = true;
     };
 
-    this.stopSpeechCapture = function stopSpeechCapture() {
+    this.stopSpeechCapture = function () {
+      console.assert(_this.constructor.name === 'Speech', 'Expected Speech object but "this" failed ');
+      console.dir(_this);
       console.log('stopSpeechCapture');
-      this.recognizing = false;
-      this.recognition.stop();
+      _this.recognizing = false;
+
+      _this.recognition.stop();
     };
 
-    this.recognition.onstart = function startSpeechRecognition() {
+    this.recognition.onstart = function () {
+      console.assert(_this.constructor.name === 'Speech', 'Expected Speech object but "this" failed ');
+      console.dir(_this);
       console.log('Started...');
     };
 
-    this.recognition.onend = function endSpeechRecognition(event) {
-      // if recognition is ended because of idle time, resume recognition. We want to end recognition only if it is explicitly stopped by user.
-      console.log('end...');
+    this.recognition.onend = function (event) {
+      console.assert(_this.constructor.name === 'Speech', 'Expected Speech object but "this" failed ');
+      console.dir(_this); // if recognition is ended because of idle time, resume recognition. We want to end recognition only if it is explicitly stopped by user.
 
-      if (this.recognizing) {
-        this.recognition.start();
+      console.log('end...');
+      console.log("this.recognizing - ".concat(_this.recognizing));
+
+      if (_this.recognizing) {
+        _this.recognition.start();
       }
     };
 
-    this.recognition.onresult = function speechRecognitionResult(event) {
+    this.recognition.onresult = function (event) {
+      console.assert(_this.constructor.name === 'Speech', 'Expected Speech object but "this" failed ');
       console.log('result');
 
       if (_typeof(event.results) === undefined) {
@@ -152,11 +163,11 @@ function Speech() {
 
       for (var i = event.resultIndex; i < event.results.length; ++i) {
         if (event.results[i].isFinal) {
-          this.finalTranscript = event.results[i][0].transcript;
+          _this.finalTranscript = event.results[i][0].transcript;
         }
       }
 
-      this.finalTranscript = function (transcript) {
+      _this.finalTranscript = function (transcript) {
         if (transcript === undefined || transcript === '') {
           return '';
         }
@@ -165,17 +176,17 @@ function Speech() {
         return transcript.replace(firstChar, function capitalize(match) {
           return match.toUpperCase();
         });
-      }(this.finalTranscript);
+      }(_this.finalTranscript);
 
       document.dispatchEvent(new CustomEvent('speechRecognitionResult', {
         bubbles: true,
         detail: {
-          finalTranscript: this.finalTranscript
+          finalTranscript: _this.finalTranscript
         }
       }));
     };
 
-    this.recognition.onerror = function speechRecognitionError(event) {
+    this.recognition.onerror = function (event) {
       console.log(event.error);
     };
   } else {
@@ -287,23 +298,30 @@ setDefaultLanguageInDropdown();
 bindResizeOnDropwdownChange(); // definition
 
 function fillLanguagesDropdown() {
+  var _getTextLanguagesDrop = getTextLanguagesDropdowns(),
+      _getTextLanguagesDrop2 = _slicedToArray(_getTextLanguagesDrop, 2),
+      sourceDropdown = _getTextLanguagesDrop2[0],
+      destinationDropdown = _getTextLanguagesDrop2[1];
+
   var languagesList = "\n<optgroup>\n    <option value=\"af\">Afrikaans</option>\n    <option value=\"sq\">Albanian</option>\n    <option value=\"am\">\u12A0\u121B\u122D\u129B</option>\n    <option value=\"ar\">Arabic</option>\n    <option value=\"hy\">\u0540\u0561\u0575\u0565\u0580\u0565\u0576</option>\n    <option value=\"az\">Azerbaijani</option>\n    <option value=\"eu\">Basque</option>\n    <option value=\"be\">Belarusian</option>\n    <option value=\"bn\">\u09AC\u09BE\u0982\u09B2\u09BE</option>\n    <option value=\"bs\">Bosnian</option>\n    <option value=\"bg\">\u0431\u044A\u043B\u0433\u0430\u0440\u0441\u043A\u0438</option>\n    <option value=\"ca\">Catal\xE0</option>\n    <option value=\"ceb\">Cebuano</option>\n    <option value=\"ny\">Chichewa</option>\n    <option value=\"zh-CN\">Chinese (Simplified)</option>\n    <option value=\"zh-TW\">Chinese (Traditional)</option>\n    <option value=\"co\">Corsican</option>\n    <option value=\"hr\">Croatian</option>\n    <option value=\"cs\">\u010Ce\u0161tina</option>\n    <option value=\"da\">Dansk</option>\n    <option value=\"nl\">Dutch</option>\n    <option value=\"en\">English</option>\n    <option value=\"eo\">Esperanto</option>\n    <option value=\"et\">Estonian</option>\n    <option value=\"tl\">Filipino</option>\n    <option value=\"fi\">Finnish</option>\n    <option value=\"fr\">French</option>\n    <option value=\"fy\">Frisian</option>\n    <option value=\"gl\">Galician</option>\n    <option value=\"ka\">\u10E5\u10D0\u10E0\u10D7\u10E3\u10DA\u10D8</option>\n    <option value=\"de\">German</option>\n    <option value=\"el\">Greek</option>\n    <option value=\"gu\">\u0A97\u0AC1\u0A9C\u0AB0\u0ABE\u0AA4\u0AC0</option>\n    <option value=\"ht\">Haitian Creole</option>\n    <option value=\"ha\">Hausa</option>\n    <option value=\"haw\">Hawaiian</option>\n    <option value=\"iw\">Hebrew</option>\n    <option value=\"hi\">\u0939\u093F\u0928\u094D\u0926\u0940</option>\n    <option value=\"hmn\">Hmong</option>\n    <option value=\"hu\">Hungarian</option>\n    <option value=\"is\">\xCDslenska</option>\n    <option value=\"ig\">Igbo</option>\n    <option value=\"id\">Indonesian</option>\n    <option value=\"ga\">Irish</option>\n    <option value=\"it\">Italiano</option>\n    <option value=\"ja\">\u65E5\u672C\u8A9E</option>\n    <option value=\"jw\">Javanese</option>\n    <option value=\"kn\">\u0C95\u0CA8\u0CCD\u0CA8\u0CA1</option>\n    <option value=\"kk\">Kazakh</option>\n    <option value=\"km\">\u1797\u17B6\u179F\u17B6\u1781\u17D2\u1798\u17C2\u179A</option>\n    <option value=\"ko\">\uD55C\uAD6D\uC5B4</option>\n    <option value=\"ku\">Kurdish (Kurmanji)</option>\n    <option value=\"ky\">Kyrgyz</option>\n    <option value=\"lo\">\u0EA5\u0EB2\u0EA7</option>\n    <option value=\"la\">Latin</option>\n    <option value=\"lv\">Latvie\u0161u</option>\n    <option value=\"lt\">Lietuvi\u0173</option>\n    <option value=\"lb\">Luxembourgish</option>\n    <option value=\"mk\">Macedonian</option>\n    <option value=\"mg\">Malagasy</option>\n    <option value=\"ms\">Bahasa Melayu</option>\n    <option value=\"ml\">\u0D2E\u0D32\u0D2F\u0D3E\u0D33\u0D02</option>\n    <option value=\"mt\">Maltese</option>\n    <option value=\"mi\">Maori</option>\n    <option value=\"mr\">\u092E\u0930\u093E\u0920\u0940</option>\n    <option value=\"mn\">Mongolian</option>\n    <option value=\"my\">Myanmar (Burmese)</option>\n    <option value=\"ne\">\u0928\u0947\u092A\u093E\u0932\u0940 \u092D\u093E\u0937\u093E</option>\n    <option value=\"no\">Norwegian</option>\n    <option value=\"ps\">Pashto</option>\n    <option value=\"fa\">Persian</option>\n    <option value=\"pl\">Polski</option>\n    <option value=\"pt\">Portugu\xEAs</option>\n    <option value=\"pa\">Punjabi</option>\n    <option value=\"ro\">Rom\xE2n\u0103</option>\n    <option value=\"ru\">P\u0443\u0441\u0441\u043A\u0438\u0439</option>\n    <option value=\"sm\">Samoan</option>\n    <option value=\"gd\">Scots Gaelic</option>\n    <option value=\"sr\">Serbian</option>\n    <option value=\"st\">Sesotho</option>\n    <option value=\"sn\">Shona</option>\n    <option value=\"sd\">Sindhi</option>\n    <option value=\"si\">\u0DC3\u0DD2\u0D82\u0DC4\u0DBD</option>\n    <option value=\"sk\">Sloven\u010Dina</option>\n    <option value=\"sl\">Sloven\u0161\u010Dina</option>\n    <option value=\"so\">Somali</option>\n    <option value=\"es\">Espa\xF1ol</option>\n    <option value=\"su\">Basa Sunda</option>\n    <option value=\"sw\">Kiswahili</option>\n    <option value=\"sv\">Svenska</option>\n    <option value=\"tg\">Tajik</option>\n    <option value=\"ta\">\u0BA4\u0BAE\u0BBF\u0BB4\u0BCD</option>\n    <option value=\"te\">\u0C24\u0C46\u0C32\u0C41\u0C17\u0C41</option>\n    <option value=\"th\">\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22</option>\n    <option value=\"tr\">T\xFCrk\xE7e</option>\n    <option value=\"uk\">\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430</option>\n    <option value=\"ur\">\u067E\u0627\u06A9\u0633\u062A\u0627\u0646</option>\n    <option value=\"uz\">Uzbek</option>\n    <option value=\"vi\">Ti\u1EBFng Vi\u1EC7t</option>\n    <option value=\"cy\">Welsh</option>\n    <option value=\"xh\">Xhosa</option>\n    <option value=\"yi\">Yiddish</option>\n    <option value=\"yo\">Yoruba</option>\n    <option value=\"zu\">IsiZulu</option>\n    </optgroup>\n";
-  document.querySelectorAll('section[data-section="translateText"] .languages').forEach(function (dropdown) {
-    dropdown.innerHTML = languagesList;
-  });
+  sourceDropdown.innerHTML = languagesList;
+  destinationDropdown.innerHTML = languagesList;
+}
+
+function getTextLanguagesDropdowns() {
+  return [document.querySelector('#translateTxtSrcLanguagesList'), document.querySelector('#translateTxtDestLanguagesList')];
 }
 
 function setDefaultLanguageInDropdown() {
-  var dropdownSourceLanguages = document.querySelectorAll('section[data-section="translateText"] select:nth-of-type(1), section[data-section="transliterate"] select:nth-of-type(1)');
-  dropdownSourceLanguages.forEach(function (dropdown) {
-    dropdown.value = config.txtTranslator.defaultSrcLang.code;
-    resizeElement(dropdown, dropdown.options[dropdown.selectedIndex].text.length);
-  });
-  var dropdownDestLanguages = document.querySelectorAll('section[data-section="translateText"] select:nth-of-type(2), section[data-section="transliterate"] select:nth-of-type(2)');
-  dropdownDestLanguages.forEach(function (dropdown) {
-    dropdown.value = config.txtTranslator.defaultDestLang.code;
-    resizeElement(dropdown, dropdown.options[dropdown.selectedIndex].text.length);
-  });
+  var _getTextLanguagesDrop3 = getTextLanguagesDropdowns(),
+      _getTextLanguagesDrop4 = _slicedToArray(_getTextLanguagesDrop3, 2),
+      sourceDropdown = _getTextLanguagesDrop4[0],
+      destinationDropdown = _getTextLanguagesDrop4[1];
+
+  sourceDropdown.value = config.txtTranslator.defaultSrcLang.code;
+  resizeElement(sourceDropdown, sourceDropdown.options[sourceDropdown.selectedIndex].text.length);
+  destinationDropdown.value = config.txtTranslator.defaultDestLang.code;
+  resizeElement(destinationDropdown, destinationDropdown.options[destinationDropdown.selectedIndex].text.length);
 }
 
 function resizeElement(dropdown, length) {
@@ -312,12 +330,18 @@ function resizeElement(dropdown, length) {
 }
 
 function bindResizeOnDropwdownChange() {
-  Array.from(document.querySelectorAll('.languages')).forEach(function (dropdown) {
-    dropdown.addEventListener('change', function (event) {
-      var language = event.target.options[event.target.selectedIndex].text;
-      resizeElement(event.target, language.length);
-    });
-  });
+  var _getTextLanguagesDrop5 = getTextLanguagesDropdowns(),
+      _getTextLanguagesDrop6 = _slicedToArray(_getTextLanguagesDrop5, 2),
+      sourceDropdown = _getTextLanguagesDrop6[0],
+      destinationDropdown = _getTextLanguagesDrop6[1];
+
+  var handler = function handler(event) {
+    var language = event.target.options[event.target.selectedIndex].text;
+    resizeElement(event.target, language.length);
+  };
+
+  sourceDropdown.addEventListener('change', handler);
+  destinationDropdown.addEventListener('change', handler);
 } // purpose
 
 
@@ -412,14 +436,13 @@ function bindResizeOnSpeechRecognitionLanguageDropwdownChange() {
       sourceDropdown = _getSpeechRecognition6[0],
       destinationDropdown = _getSpeechRecognition6[1];
 
-  sourceDropdown.addEventListener('change', function (event) {
+  var handler = function handler(event) {
     var language = event.target.options[event.target.selectedIndex].text;
     resizeElement(event.target, language.length);
-  });
-  destinationDropdown.addEventListener('change', function (event) {
-    var language = event.target.options[event.target.selectedIndex].text;
-    resizeElement(event.target, language.length);
-  });
+  };
+
+  sourceDropdown.addEventListener('change', handler);
+  destinationDropdown.addEventListener('change', handler);
 }
 
 function bindSpeechRecognitionLanguageDropwdownChange() {
@@ -453,7 +476,8 @@ window.addEventListener('load', function speechInitializer() {
   document.addEventListener('speechRecognitionResult', function (event) {
     var speech = "".concat(event.detail.finalTranscript, ".");
     var speechTextarea = document.getElementById('translateSpeechSrc');
-    speechTextarea.innerHTML += speech;
+    var textNode = document.createTextNode(speech);
+    speechTextarea.appendChild(textNode);
   });
   document.addEventListener('speechRecognitionLanguageChanged', function (event) {
     speech.stopSpeechCapture();
@@ -476,9 +500,10 @@ function bindTranslateButtonClickAction() {
 }
 
 function invokeTranslate(btnTranslate) {
-  var source = document.getElementById(btnTranslate).previousElementSibling || document.getElementById(btnTranslate).previousElementSibling.querySelector('textarea');
-  var yourText = source.value;
-  var destination = document.getElementById(btnTranslate).nextElementSibling || document.getElementById(btnTranslate).nextElementSibling.querySelector('textarea');
+  console.log("btnTranslate id - ".concat(btnTranslate));
+  var source = document.getElementById(btnTranslate).previousElementSibling.querySelector('.content');
+  var yourText = source.textContent;
+  var destination = document.getElementById(btnTranslate).nextElementSibling.querySelector('.content');
 
   var _document$getElementB = document.getElementById(btnTranslate).closest('section').querySelectorAll('select'),
       _document$getElementB2 = _slicedToArray(_document$getElementB, 2),
@@ -498,39 +523,53 @@ function generateTranslateServiceURL(yourText, srcLanguage, destLanguage) {
 }
 
 function invokeTranslateService(yourText, url, destination) {
-  destination.value = '';
+  destination.textContent = '';
 
   if (yourText.trim() === '') {
     return;
   }
 
-  destination.value = 'Translation in progress...';
+  destination.textContent = 'Translation in progress...';
 
   try {
     translator(yourText, destination, url, writeTranslationResult);
   } catch (error) {
-    destination.value = 'Error';
+    destination.textContent = 'Error';
   }
 }
 
 function restrictMaxCharactersinTextarea() {
-  document.querySelectorAll('textarea.source').forEach(function (textarea) {
+  document.querySelectorAll('.content.source').forEach(function (textarea) {
     textarea.addEventListener('input', function (e) {
-      var yourText = e.target.value;
+      var yourText = e.target.textContent;
 
-      if (yourText.length > 1500) {
-        yourText = yourText.substring(0, 1500);
+      if (yourText.length > config.maxCharactersPerTranslation) {
+        yourText = yourText.substring(0, config.maxCharactersPerTranslation);
         var positionOfLastFullStop = yourText.lastIndexOf('.');
         yourText = yourText.substring(0, positionOfLastFullStop + 1);
-        e.target.value = yourText;
+        e.target.textContent = yourText;
       }
     });
   });
 }
 
 function writeTranslationResult(result, destination) {
-  destination.value = result;
+  destination.textContent = result;
 }
+
+document.querySelectorAll('[contenteditable]').forEach(function (textarea) {
+  textarea.addEventListener('paste', function (e) {
+    var clipboardData;
+    var pastedData; // Stop data actually being pasted into div
+
+    e.stopPropagation();
+    e.preventDefault(); // Get pasted data via clipboard API
+
+    clipboardData = e.clipboardData || window.clipboardData;
+    pastedData = clipboardData.getData('Text');
+    textarea.textContent += pastedData;
+  });
+});
 
 (function transliterate() {
   google.load('elements', '1', {
