@@ -37,7 +37,7 @@ var config = {
     }
   },
   translatorServiceURL: 'https://translate.googleapis.com/translate_a/single?client=gtx&sl={sl}&tl={tl}&dt=t&ie=UTF-8&oe=UTF-8&',
-  corsApiHost: 'https://ec2-54-152-20-9.compute-1.amazonaws.com:3000',
+  corsApiHost: 'http://ec2-54-152-20-9.compute-1.amazonaws.com:3000',
 
   // corsApiHost: 'cors-anywhere.herokuapp.com',
   get corsApiUrl() {
