@@ -37,7 +37,9 @@ var config = {
     }
   },
   translatorServiceURL: 'https://translate.googleapis.com/translate_a/single?client=gtx&sl={sl}&tl={tl}&dt=t&ie=UTF-8&oe=UTF-8&',
-  corsApiHost: 'http://ec2-54-152-20-9.compute-1.amazonaws.com:3000',
+  translatorSerivceProvider: 'https://translate.googleapis.com',
+  corsApiHost: 'http://3.219.42.125:3000',
+  useCors: false,
 
   // corsApiHost: 'cors-anywhere.herokuapp.com',
   get corsApiUrl() {
@@ -72,10 +74,9 @@ function translator(yourText, destination, url, callback, idBtnTranslate) {
   };
 
   xhr.send(null);
-} // CORS proxy by heroku
+}
 
-
-(function corsProxyHeroku() {
+var googleTranslateUrl = function corsProxy() {
   var slice = [].slice;
   var origin = "".concat(window.location.protocol, "//").concat(window.location.host);
   var open = XMLHttpRequest.prototype.open;
@@ -84,13 +85,13 @@ function translator(yourText, destination, url, callback, idBtnTranslate) {
     var args = slice.call(arguments);
     var targetOrigin = /^https?:\/\/([^\/]+)/i.exec(args[1]);
 
-    if (targetOrigin && targetOrigin[0].toLowerCase() !== origin && targetOrigin[1] !== config.corsApiHost) {
+    if (targetOrigin && targetOrigin[0].toLowerCase() === config.translatorSerivceProvider && config.useCors) {
       args[1] = config.corsApiUrl + args[1];
     }
 
     return open.apply(this, args);
   };
-})();
+}();
 
 function Speech() {
   var _this = this;
