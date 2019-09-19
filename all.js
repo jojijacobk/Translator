@@ -38,14 +38,9 @@ var config = {
   },
   translatorServiceURL: 'https://translate.googleapis.com/translate_a/single?client=gtx&sl={sl}&tl={tl}&dt=t&ie=UTF-8&oe=UTF-8&',
   translatorSerivceProvider: 'https://translate.googleapis.com',
-  corsApiHost: 'http://3.219.42.125:3000',
-  useCors: false,
-
-  // corsApiHost: 'cors-anywhere.herokuapp.com',
-  get corsApiUrl() {
-    return "".concat(this.corsApiHost, "/");
-  }
-
+  // corsApiHost: 'cors-anywhere.herokuapp.com/',
+  corsProxyURL: 'http://3.219.42.125:3000/',
+  shouldRouteThroughCorsProxy: false
 };
 
 function translator(yourText, destination, url, callback, idBtnTranslate) {
@@ -68,7 +63,13 @@ function translator(yourText, destination, url, callback, idBtnTranslate) {
         callback(result, destination, idBtnTranslate);
       } catch (e) {
         console.error(e);
-        callback('Sorry! There is an error. Please try later', destination, idBtnTranslate);
+
+        if (!config.shouldRouteThroughCorsProxy) {
+          config.shouldRouteThroughCorsProxy = true;
+          translator(yourText, destination, url, callback, idBtnTranslate);
+        } else {
+          callback('Sorry, there is an error. Please try later', destination, idBtnTranslate);
+        }
       }
     }
   };
@@ -76,22 +77,23 @@ function translator(yourText, destination, url, callback, idBtnTranslate) {
   xhr.send(null);
 }
 
-var googleTranslateUrl = function corsProxy() {
-  var slice = [].slice;
-  var origin = "".concat(window.location.protocol, "//").concat(window.location.host);
+(function corsProxy() {
   var open = XMLHttpRequest.prototype.open;
 
   XMLHttpRequest.prototype.open = function customOpen() {
-    var args = slice.call(arguments);
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
     var targetOrigin = /^https?:\/\/([^\/]+)/i.exec(args[1]);
 
-    if (targetOrigin && targetOrigin[0].toLowerCase() === config.translatorSerivceProvider && config.useCors) {
-      args[1] = config.corsApiUrl + args[1];
+    if (targetOrigin[0] === config.translatorSerivceProvider && config.shouldRouteThroughCorsProxy) {
+      args[1] = config.corsProxyURL + args[1];
     }
 
     return open.apply(this, args);
   };
-}();
+})();
 
 function Speech() {
   var _this = this;
