@@ -39,7 +39,7 @@ var config = {
   translatorServiceURL: 'https://translate.googleapis.com/translate_a/single?client=gtx&sl={sl}&tl={tl}&dt=t&ie=UTF-8&oe=UTF-8&',
   translatorSerivceProvider: 'https://translate.googleapis.com',
   // corsApiHost: 'cors-anywhere.herokuapp.com/',
-  corsProxyURL: 'http://3.219.42.125:3000/',
+  corsProxyURL: 'https://corslb-861327797.us-east-1.elb.amazonaws.com/',
   shouldRouteThroughCorsProxy: false
 };
 
