@@ -269,7 +269,7 @@ var mapperSpeechCodeToTranslateCode = function mapperSpeechCodeToTranslateCode(f
 bindMenuClickAction(); // definition
 
 function bindMenuClickAction() {
-  var menuItems = document.querySelectorAll('.menu');
+  var menuItems = document.querySelectorAll('.nav a');
   Array.from(menuItems).forEach(function (item) {
     item.addEventListener('click', function () {
       Array.from(menuItems).forEach(function (menu) {
@@ -295,8 +295,12 @@ function hideAllSections() {
 function unhideSection(section) {
   var activeSection = document.querySelector("[data-section=\"".concat(section, "\"]"));
   activeSection.classList.remove('hide');
-} // purpose
+}
 
+$('.menu-toggle').click(function () {
+  $('ul.nav').toggleClass('opening');
+  $(this).toggleClass('open');
+}); // purpose
 
 fillLanguagesDropdown();
 setDefaultLanguageInDropdown();

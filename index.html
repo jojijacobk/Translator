@@ -2,18 +2,40 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Translator</title>
+    <title>All Languages Translator</title>
     <link rel="stylesheet" href="all.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato|Handlee|Rancho&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,300i,400,700&display=swap" rel="stylesheet">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145827690-1"></script>
     <script src="other.js"></script>
 </head>
 
 <body>
 
-    <nav>
+    <div class="wrapper">
+        <nav class="site-nav">
+            <h1 class="logo">All Languages<span> Translator</span></h1>
+
+            <div class="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
+
+            <ul class="open desktop nav">
+                <li><a data-nav="translateText" class="activeMenu" href="#!">Translate Text</a></li>
+                <li><a data-nav="translateSpeech" href="#!">Translate Speech</a></li>
+                <li><a data-nav="transliterate" href="#!">Transliterate Text</a></li>
+                <li><a data-nav="contactme" href="#!"><i class="fa fa-envelope site-nav--icon"></i>Contact Me</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- <nav>
         <ul>
             <li data-nav="translateText" class="menu translateTextMenu activeMenu">
                 <span>Translate Text</span>
@@ -25,11 +47,12 @@
                 <span>Transliterate</span>
             </li>
         </ul>
-    </nav>
+    </nav> -->
 
     <main>
         <section data-section="translateText">
-            <h3 class="title"> Translate your <span class="underlineText"> text </span> from X to Y</h3>
+            <h1 class="message"> You chose to translate from <span>English</span> to<span>
+                    Malayalam</span></h1>
             <article>
                 <div class="source translate textarea">
                     <select id="translateTxtSrcLanguagesList" class="languages" aria-label="Language Translate Source">
@@ -54,7 +77,13 @@
         </section>
 
         <section data-section="translateSpeech" class="hide">
-            <h3 class="title"> Translate your <span class="underlineSpeech"> speech </span> from X to Y</h3>
+            <h1 class="message">
+                You chose to translate from <span>English</span> to<span> Malayalam</span>
+            </h1>
+            <div class="micContainer">
+                <span>Press the mic button and speak</span>
+                <button id="mic" class="mic"><img src="images/mic.png"></button>
+            </div>
             <article>
                 <div class="textarea source translate">
                     <select id="translateSpeechSrcLanguagesList" class="languages"
@@ -75,13 +104,13 @@
                         </div>
                     </div>
                 </div>
-                <button id="mic" class="mic"><img src="images/mic.png"></button>
             </article>
 
         </section>
 
         <section data-section="transliterate" class="hide">
-            <h3 class="title">Transliterate English to Malayalam </h3>
+            <h1 class="message"> You chose to transliterate from <span>English</span> to<span>
+                    Malayalam</span></h1>
             <article>
                 <div class="transliterate textarea">
                     <div class="pattern">
@@ -95,6 +124,10 @@
     </main>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+
+
+
 <script src="all.js"></script>
 
 </html>
