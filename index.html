@@ -35,27 +35,15 @@
         </nav>
     </div>
 
-    <!-- <nav>
-        <ul>
-            <li data-nav="translateText" class="menu translateTextMenu activeMenu">
-                <span>Translate Text</span>
-            </li>
-            <li data-nav="translateSpeech" class="menu translateSpeechMenu">
-                <span>Translate Speech</span>
-            </li>
-            <li data-nav="transliterate" class="menu transliterateMenu">
-                <span>Transliterate</span>
-            </li>
-        </ul>
-    </nav> -->
-
     <main>
         <section data-section="translateText">
-            <h1 class="message"> You chose to translate from <span>English</span> to<span>
+            <h1 class="message"> You chose to translate from <span class="sourceLanguage">English</span> to <span
+                    class="destinationLanguage">
                     Malayalam</span></h1>
             <article>
                 <div class="source translate textarea">
-                    <select id="translateTxtSrcLanguagesList" class="languages" aria-label="Language Translate Source">
+                    <select id="translateTxtSrcLanguagesList" class="languages" aria-label="Language Translate Source"
+                        data-origin="sourceLanguage">
                     </select>
                     <div class="pattern">
                         <div class="content" contenteditable="true" id="translateTxtSrc">
@@ -67,7 +55,7 @@
                 </button>
                 <div class="textarea translate">
                     <select id="translateTxtDestLanguagesList" class="languages"
-                        aria-label="Language Translate Destination"></select>
+                        aria-label="Language Translate Destination" data-origin="destinationLanguage"></select>
                     <div class="pattern">
                         <div class="content" contenteditable="true" id="translateTxtDest">
                         </div>
@@ -77,9 +65,9 @@
         </section>
 
         <section data-section="translateSpeech" class="hide">
-            <h1 class="message">
-                You chose to translate from <span>English</span> to<span> Malayalam</span>
-            </h1>
+            <h1 class="message"> You chose to translate from <span class="sourceLanguage">English</span> to <span
+                    class="destinationLanguage">
+                    Malayalam</span></h1>
             <div class="micContainer">
                 <span>Press the mic button and speak</span>
                 <button id="mic" class="mic"><img src="images/mic.png"></button>
@@ -87,7 +75,7 @@
             <article>
                 <div class="textarea source translate">
                     <select id="translateSpeechSrcLanguagesList" class="languages"
-                        aria-label="Language Translate Source"> </select>
+                        aria-label="Language Translate Source" data-origin="sourceLanguage"> </select>
                     <div class="pattern">
                         <div class="content" contenteditable="true" id="translateSpeechSrc">
 
@@ -97,7 +85,7 @@
                 <button id="btnTranslateSpeech" class="btnTranslate">Translate <i class="arrow right"></i></button>
                 <div class="textarea translate">
                     <select id="translateSpeechDestLanguagesList" class="languages"
-                        aria-label="Language Translate Destination"></select>
+                        aria-label="Language Translate Destination" data-origin="destinationLanguage"></select>
                     <div class="pattern">
                         <div class="content" contenteditable="true" id="translateSpeechDest">
 
@@ -109,7 +97,8 @@
         </section>
 
         <section data-section="transliterate" class="hide">
-            <h1 class="message"> You chose to transliterate from <span>English</span> to<span>
+            <h1 class="message"> You chose to transliterate from <span class="sourceLanguage">English</span> to <span
+                    class="destinationLanguage">
                     Malayalam</span></h1>
             <article>
                 <div class="transliterate textarea">

@@ -308,7 +308,7 @@ $('.menu-toggle').click(function () {
 
 fillLanguagesDropdown();
 setDefaultLanguageInDropdown();
-bindResizeOnDropwdownChange(); // definition
+bindDropdownChange(); // definition
 
 function fillLanguagesDropdown() {
   var _getTextLanguagesDrop = getTextLanguagesDropdowns(),
@@ -342,26 +342,35 @@ function resizeElement(dropdown, length) {
   dropdown.style.width = "".concat(length, "rem");
 }
 
-function bindResizeOnDropwdownChange() {
+function bindDropdownChange() {
+  var resizeDropdownHandler = function resizeDropdownHandler(event) {
+    var language = event.target.options[event.target.selectedIndex].text;
+    resizeElement(event.target, language.length);
+  };
+
+  var updateHeaderMessageHandler = function updateHeaderMessageHandler(event) {
+    var language = event.target.options[event.target.selectedIndex].text;
+    var originOfDropdown = event.target.dataset.origin;
+    event.target.closest('section').querySelector(".".concat(originOfDropdown)).textContent = language;
+  };
+
   var _getTextLanguagesDrop5 = getTextLanguagesDropdowns(),
       _getTextLanguagesDrop6 = _slicedToArray(_getTextLanguagesDrop5, 2),
       sourceDropdown = _getTextLanguagesDrop6[0],
       destinationDropdown = _getTextLanguagesDrop6[1];
 
-  var handler = function handler(event) {
-    var language = event.target.options[event.target.selectedIndex].text;
-    resizeElement(event.target, language.length);
-  };
-
-  sourceDropdown.addEventListener('change', handler);
-  destinationDropdown.addEventListener('change', handler);
+  sourceDropdown.addEventListener('change', resizeDropdownHandler);
+  destinationDropdown.addEventListener('change', resizeDropdownHandler);
+  sourceDropdown.addEventListener('change', updateHeaderMessageHandler);
+  destinationDropdown.addEventListener('change', updateHeaderMessageHandler);
 } // purpose
 
 
 fillSpeechRecognitionLanguagesDropdown();
 setDefaultSpeechRecognitionLanguageInDropdown();
 bindResizeOnSpeechRecognitionLanguageDropwdownChange();
-bindSpeechRecognitionLanguageDropwdownChange(); // definition
+bindSpeechRecognitionLanguageDropwdownChange();
+bindHeaderMessageonLanguageDropwdownChange(); // definition
 
 function fillSpeechRecognitionLanguagesDropdown() {
   var _getSpeechRecognition = getSpeechRecognitionLanguagesDropdowns(),
@@ -472,6 +481,22 @@ function bindSpeechRecognitionLanguageDropwdownChange() {
       }
     }));
   });
+}
+
+function bindHeaderMessageonLanguageDropwdownChange() {
+  var updateHeaderMessageHandler = function updateHeaderMessageHandler(event) {
+    var language = event.target.options[event.target.selectedIndex].text;
+    var originOfDropdown = event.target.dataset.origin;
+    event.target.closest('section').querySelector(".".concat(originOfDropdown)).textContent = language;
+  };
+
+  var _getSpeechRecognition9 = getSpeechRecognitionLanguagesDropdowns(),
+      _getSpeechRecognition10 = _slicedToArray(_getSpeechRecognition9, 2),
+      sourceDropdown = _getSpeechRecognition10[0],
+      destinationDropdown = _getSpeechRecognition10[1];
+
+  sourceDropdown.addEventListener('change', updateHeaderMessageHandler);
+  destinationDropdown.addEventListener('change', updateHeaderMessageHandler);
 }
 
 window.addEventListener('load', function speechInitializer() {
