@@ -48,7 +48,7 @@ function translator(yourText, destination, url, callback, idBtnTranslate) {
   xhr.open('GET', url, true);
   var targetOrigin = /^https?:\/\/([^\/]+)/i.exec(url);
 
-  if (targetOrigin[0] === config.translatorSerivceProvider) {
+  if (targetOrigin[0] !== config.translatorSerivceProvider) {
     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
   }
 
