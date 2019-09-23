@@ -45,8 +45,7 @@ var config = {
 
 function translator(yourText, destination, url, callback, idBtnTranslate) {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', url, true);
-  xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+  xhr.open('GET', url, true); // xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 
   xhr.onreadystatechange = function onreadystatechange() {
     if (xhr.readyState === 4) {
