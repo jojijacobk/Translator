@@ -271,11 +271,71 @@ article select {
   width: 60px;
   height: 60px;
   background-position: center;
-  background-color: rgb(229, 229, 229, 0.1);
   z-index: 100;
-  top: -12px;
-  left: 26.5px;
+  top: -30%;
+  left: 30%;
 }
+
+.clearButton {
+  cursor: pointer;
+  background-color: #f04343e3;
+  padding: 10px 20px;
+  float: right;
+  margin: 10px 10px 0 0;
+  color: #fff;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 7px #686868;
+}
+
+.clearButton:hover {
+  background-color: #ca4747;
+}
+
+.clearButton:active {
+  background-color: #ca4747;
+  box-shadow: 0 3px #666;
+  -webkit-transform: translateY(4px);
+      -ms-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
+section[data-section="contactme"] article ul {
+  width: 100%;
+  text-align: center;
+  margin: 4em 0 0 0;
+}
+
+section[data-section="contactme"] article ul li {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  -webkit-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  box-shadow: 10px 10px 20px #5f3a3a;
+  text-decoration: none;
+  background-color: #000000cf;
+  list-style-type: none;
+  margin-bottom: 1em;
+}
+
+section[data-section="contactme"] article li a {
+  text-decoration: none;
+  color: #eaeaea;
+}
+
+section[data-section="contactme"] article li strong {
+  color: #a7a7a7;
+}
+@media (min-width: 801px) {
+    #spinningWheel {
+        left: 25%;
+    }
+}
+
 @media (max-width: 800px) {
 
     .menu {
@@ -331,6 +391,10 @@ article select {
     .textarea {
         width: 90%;
     }
+
+    #spinningWheel {
+        left: 45%;
+    }
 }
 
 @media (min-width: 481px) {
@@ -344,6 +408,24 @@ article select {
         flex-basis: 0;
         -webkit-box-flex: 0.5;
                 flex-grow: 0.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .translate {
+        -webkit-box-flex: 1;
+                flex-grow: 1;
+        flex-basis: 0;
+    }
+
+    .transliterate {
+        flex-basis: 0;
+        -webkit-box-flex: 0.5;
+                flex-grow: 0.5;
+    }
+
+    #spinningWheel {
+        left: 40%;
     }
 }
 * {

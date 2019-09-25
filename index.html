@@ -26,10 +26,10 @@
             </div>
 
             <ul class="open desktop nav">
-                <li><a data-nav="translateText" class="activeMenu" href="#!">Translate Text</a></li>
-                <li><a data-nav="translateSpeech" href="#!">Translate Speech</a></li>
-                <li><a data-nav="transliterate" href="#!">Transliterate Text</a></li>
-                <li><a data-nav="contactme" href="#!"><i class="fa fa-envelope site-nav--icon"></i>Contact Me</a>
+                <li><a data-nav="translateText" class="activeMenu" href="#">Translate Text</a></li>
+                <li><a data-nav="translateSpeech" href="#">Translate Speech</a></li>
+                <li><a data-nav="transliterate" href="#">Transliterate Text</a></li>
+                <li><a data-nav="contactme" href="#"><i class="fa fa-envelope site-nav--icon"></i>Contact Me</a>
                 </li>
             </ul>
         </nav>
@@ -48,6 +48,7 @@
                     <div class="pattern">
                         <div class="content" contenteditable="true" id="translateTxtSrc">
                         </div>
+                        <div class="clearButton">Clear</div>
                     </div>
                 </div>
                 <button id="btnTranslateTxt" class="btnTranslate">Translate <i class="arrow right"></i>
@@ -59,6 +60,7 @@
                     <div class="pattern">
                         <div class="content" contenteditable="true" id="translateTxtDest">
                         </div>
+                        <div class="clearButton">Clear</div>
                     </div>
                 </div>
             </article>
@@ -80,6 +82,8 @@
                         <div class="content" contenteditable="true" id="translateSpeechSrc">
 
                         </div>
+                        <div class="clearButton">Clear</div>
+
                     </div>
                 </div>
                 <button id="btnTranslateSpeech" class="btnTranslate">Translate <i class="arrow right"></i></button>
@@ -90,6 +94,8 @@
                         <div class="content" contenteditable="true" id="translateSpeechDest">
 
                         </div>
+                        <div class="clearButton">Clear</div>
+
                     </div>
                 </div>
             </article>
@@ -97,7 +103,7 @@
         </section>
 
         <section data-section="transliterate" class="hide">
-            <h1 class="message"> You chose to transliterate from <span class="sourceLanguage">English</span> to <span
+            <h1 class="message"> Transliterate from <span class="sourceLanguage">English</span> to <span
                     class="destinationLanguage">
                     Malayalam</span></h1>
             <article>
@@ -106,8 +112,18 @@
                         <div class="content" contenteditable="true" id="transliterate">
 
                         </div>
+                        <div class="clearButton">Clear</div>
                     </div>
                 </div>
+            </article>
+        </section>
+
+        <section data-section="contactme" class="hide">
+            <article>
+                <ul>
+                    <li><strong>Email</strong> : <a href="mailto:jojijacobk@gmail.com">joji.jacob.k@gmail.com</a></li>
+                    <li><strong>GitHub</strong> : <a href="https://github.com/jojijacobk">jojijacobk</a></li>
+                </ul>
             </article>
         </section>
     </main>

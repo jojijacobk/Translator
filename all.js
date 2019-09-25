@@ -200,6 +200,9 @@ function Speech() {
     };
   } else {
     console.log('webkitSpeechRecognition is not available.');
+    document.querySelector('[data-section="translateSpeech"] article').remove();
+    document.querySelector('[data-section="translateSpeech"] .micContainer').remove();
+    document.querySelector('[data-section="translateSpeech"] .message').textContent = 'Please use latest Chrome browser to use speech recognition feature';
   }
 }
 
@@ -527,7 +530,8 @@ window.addEventListener('load', function speechInitializer() {
 }); // purpose
 
 bindTranslateButtonClickAction();
-restrictMaxCharactersinTextarea(); // definition
+restrictMaxCharactersinTextarea();
+bindClearButton(); // definition
 
 function bindTranslateButtonClickAction() {
   document.querySelectorAll('.btnTranslate').forEach(function (btnTranslate) {
@@ -625,6 +629,14 @@ document.querySelectorAll('[contenteditable]').forEach(function (textarea) {
   });
 });
 
+function bindClearButton() {
+  document.querySelectorAll('.clearButton').forEach(function (clearButton) {
+    clearButton.addEventListener('click', function (e) {
+      e.target.closest('.pattern').querySelector('.content').textContent = '';
+    });
+  });
+}
+
 (function transliterate() {
   google.load('elements', '1', {
     packages: 'transliteration'
@@ -642,3 +654,29 @@ document.querySelectorAll('[contenteditable]').forEach(function (textarea) {
 
   google.setOnLoadCallback(onLoad);
 })(google);
+
+var isMobile = {
+  Android: function Android() {
+    return navigator.userAgent.match(/Android/i);
+  },
+  BlackBerry: function BlackBerry() {
+    return navigator.userAgent.match(/BlackBerry/i);
+  },
+  iOS: function iOS() {
+    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+  },
+  Opera: function Opera() {
+    return navigator.userAgent.match(/Opera Mini/i);
+  },
+  Windows: function Windows() {
+    return navigator.userAgent.match(/IEMobile/i);
+  },
+  any: function any() {
+    return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+  }
+};
+
+if (isMobile.any()) {
+  document.querySelector('[data-section="transliterate"] .message').textContent = 'Transliterate feature is currently available only on Desktop browsers. Let me know if you would this feature on your mobile device.';
+  document.querySelector('[data-section="transliterate"] article').remove();
+}
