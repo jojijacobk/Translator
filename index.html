@@ -1,1 +1,146 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>All Languages Translator</title><link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png"><link rel="manifest" href="images/favicon/site.webmanifest"><link rel="stylesheet" href="all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,300i,400,700&display=swap" rel="stylesheet"><script async src="https://www.googletagmanager.com/gtag/js?id=G-VW75F1ZFE7"></script><script src="other.js"></script></head><body><div class="wrapper"><nav class="site-nav"><h1 class="logo">All Languages<span> Translator</span></h1><div class="menu-toggle"><div class="hamburger"></div></div><ul class="open desktop nav"><li><a data-nav="translateText" class="activeMenu" href="#">Translate Text</a></li><li><a data-nav="translateSpeech" href="#">Translate Speech</a></li><li><a data-nav="transliterate" href="#">Transliterate Text</a></li><li><a data-nav="contactme" href="#"><i class="fa fa-envelope site-nav--icon"></i>Contact Me</a></li></ul></nav></div><main><section data-section="translateText"><h1 class="message">You chose to translate from <span class="sourceLanguage">English</span> to <span class="destinationLanguage">Malayalam</span></h1><article><div class="source translate textarea"><select id="translateTxtSrcLanguagesList" class="languages" aria-label="Language Translate Source" data-origin="sourceLanguage"></select><div class="pattern"><div class="content" contenteditable="true" id="translateTxtSrc"></div><div class="clearButton">Clear</div></div></div><button id="btnTranslateTxt" class="btnTranslate">Translate <i class="arrow right"></i> <span id="spinningWheel" class="hide"></span></button><div class="textarea translate"><select id="translateTxtDestLanguagesList" class="languages" aria-label="Language Translate Destination" data-origin="destinationLanguage"></select><div class="pattern"><div class="content" contenteditable="true" id="translateTxtDest"></div><div class="clearButton">Clear</div></div></div></article></section><section data-section="translateSpeech" class="hide"><h1 class="message">You chose to translate from <span class="sourceLanguage">English</span> to <span class="destinationLanguage">Malayalam</span></h1><div class="micContainer"><span>Press the mic button and speak</span> <button id="mic" class="mic"><img src="images/mic.png"></button></div><article><div class="textarea source translate"><select id="translateSpeechSrcLanguagesList" class="languages" aria-label="Language Translate Source" data-origin="sourceLanguage"></select><div class="pattern"><div class="content" contenteditable="true" id="translateSpeechSrc"></div><div class="clearButton">Clear</div></div></div><button id="btnTranslateSpeech" class="btnTranslate">Translate <i class="arrow right"></i></button><div class="textarea translate"><select id="translateSpeechDestLanguagesList" class="languages" aria-label="Language Translate Destination" data-origin="destinationLanguage"></select><div class="pattern"><div class="content" contenteditable="true" id="translateSpeechDest"></div><div class="clearButton">Clear</div></div></div></article></section><section data-section="transliterate" class="hide"><h1 class="message">Transliterate from <span class="sourceLanguage">English</span> to <span class="destinationLanguage">Malayalam</span></h1><article><div class="transliterate textarea"><div class="pattern"><div class="content" contenteditable="true" id="transliterate"></div><div class="clearButton">Clear</div></div></div></article></section><section data-section="contactme" class="hide"><article><ul><li><strong>Name</strong> <a href="mailto:jojijacobk@gmail.com">Joji Jacob</a></li><li><strong>GitHub</strong> : <a href="https://github.com/jojijacobk">jojijacobk</a></li><li><strong>Email</strong> : <a href="mailto:jojijacobk@gmail.com">jojijacobk@gmail.com</a></li></ul></article></section></main><footer><small>&copy; Copyright 2019, thetranslator.live</small></footer></body><script src="all.js"></script><script src="speechRecognition.js"></script></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Languages Translator</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,300i,400,700&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW75F1ZFE7"></script>
+
+    <script src="other.js"></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <nav class="site-nav">
+            <h1 class="logo">All Languages<span> Translator</span></h1>
+
+            <div class="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
+
+            <ul class="open desktop nav">
+                <li><a data-nav="translateText" class="activeMenu" href="#">Translate Text</a></li>
+                <li><a data-nav="translateSpeech" href="#">Translate Speech</a></li>
+                <li><a data-nav="transliterate" href="#">Transliterate Text</a></li>
+                <li><a data-nav="contactme" href="#"><i class="fa fa-envelope site-nav--icon"></i>Contact Me</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <section data-section="translateText">
+            <h1 class="message"> You chose to translate from <span class="sourceLanguage">English</span> to <span
+                    class="destinationLanguage">
+                    Malayalam</span></h1>
+            <article>
+                <div class="source translate textarea">
+                    <select id="translateTxtSrcLanguagesList" class="languages" aria-label="Language Translate Source"
+                        data-origin="sourceLanguage">
+                    </select>
+                    <div class="pattern">
+                        <div class="content" contenteditable="true" id="translateTxtSrc">
+                        </div>
+                        <div class="clearButton">Clear</div>
+                    </div>
+                </div>
+                <button id="btnTranslateTxt" class="btnTranslate">Translate <i class="arrow right"></i>
+                    <span id="spinningWheel" class="hide"></span>
+                </button>
+                <div class="textarea translate">
+                    <select id="translateTxtDestLanguagesList" class="languages"
+                        aria-label="Language Translate Destination" data-origin="destinationLanguage"></select>
+                    <div class="pattern">
+                        <div class="content" contenteditable="true" id="translateTxtDest">
+                        </div>
+                        <div class="clearButton">Clear</div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section data-section="translateSpeech" class="hide">
+            <h1 class="message"> You chose to translate from <span class="sourceLanguage">English</span> to <span
+                    class="destinationLanguage">
+                    Malayalam</span></h1>
+            <div class="micContainer">
+                <span>Press the mic button and speak</span>
+                <button id="mic" class="mic"><img src="images/mic.png"></button>
+            </div>
+            <article>
+                <div class="textarea source translate">
+                    <select id="translateSpeechSrcLanguagesList" class="languages"
+                        aria-label="Language Translate Source" data-origin="sourceLanguage"> </select>
+                    <div class="pattern">
+                        <div class="content" contenteditable="true" id="translateSpeechSrc">
+
+                        </div>
+                        <div class="clearButton">Clear</div>
+
+                    </div>
+                </div>
+                <button id="btnTranslateSpeech" class="btnTranslate">Translate <i class="arrow right"></i></button>
+                <div class="textarea translate">
+                    <select id="translateSpeechDestLanguagesList" class="languages"
+                        aria-label="Language Translate Destination" data-origin="destinationLanguage"></select>
+                    <div class="pattern">
+                        <div class="content" contenteditable="true" id="translateSpeechDest">
+
+                        </div>
+                        <div class="clearButton">Clear</div>
+
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <section data-section="transliterate" class="hide">
+            <h1 class="message"> Transliterate from <span class="sourceLanguage">English</span> to <span
+                    class="destinationLanguage">
+                    Malayalam</span></h1>
+            <article>
+                <div class="transliterate textarea">
+                    <div class="pattern">
+                        <div class="content" contenteditable="true" id="transliterate">
+
+                        </div>
+                        <div class="clearButton">Clear</div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section data-section="contactme" class="hide">
+            <article>
+                <ul>
+                    <li><strong>Name</strong> <a href="mailto:jojijacobk@gmail.com">Joji Jacob</a></li>
+                    <li><strong>GitHub</strong> : <a href="https://github.com/jojijacobk">jojijacobk</a></li>
+                    <li><strong>Email</strong> : <a href="mailto:jojijacobk@gmail.com">jojijacobk@gmail.com</a></li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <small>&copy; Copyright 2019, thetranslator.live</small>
+    </footer>
+</body>
+
+<script src="all.js"></script>
+<script src="speechRecognition.js"></script>
+
+
+</html>
