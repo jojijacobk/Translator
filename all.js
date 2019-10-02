@@ -304,9 +304,9 @@ function unhideSection(section) {
   activeSection.classList.remove('hide');
 }
 
-$('.menu-toggle').click(function () {
-  $('ul.nav').toggleClass('opening');
-  $(this).toggleClass('open');
+document.querySelector('.menu-toggle').addEventListener('click', function (e) {
+  e.currentTarget.classList.toggle('open');
+  document.querySelector('ul.nav').classList.toggle('opening');
 }); // purpose
 
 fillLanguagesDropdown();
@@ -677,6 +677,6 @@ var isMobile = {
 };
 
 if (isMobile.any()) {
-  document.querySelector('[data-section="transliterate"] .message').textContent = 'Transliterate feature is currently available only on Desktop browsers. Let me know if you would this feature on your mobile device.';
+  document.querySelector('[data-section="transliterate"] .message').textContent = 'Transliterate feature is currently available only on Desktop browsers. Let me know if you would like this feature on your mobile device.';
   document.querySelector('[data-section="transliterate"] article').remove();
 }

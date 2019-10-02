@@ -330,6 +330,12 @@ section[data-section="contactme"] article li a {
 section[data-section="contactme"] article li strong {
   color: #a7a7a7;
 }
+
+footer {
+  display: block;
+  text-align: center;
+  padding: 10px;
+}
 @media (min-width: 801px) {
     #spinningWheel {
         left: 25%;
