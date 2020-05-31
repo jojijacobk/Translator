@@ -1,1 +1,830 @@
-var a=['from','YTivB','[data-section=\x22','.menu-toggle','currentTarget','toggle','ul.nav','opening','#translateTxtSrcLanguagesList','#translateTxtDestLanguagesList','txtTranslator','style','width','rem','wrulm','FxiSQ','closest','.pattern','.content','af-ZA','አማርኛ','am-ET','Azərbaycanca','az-AZ','বাংলা','id-ID','Bahasa\x20Melayu','ms-MY','Català','ca-ES','Čeština','cs-CZ','Dansk','de-DE','English','Español','Euskara','eu-ES','Filipino','Basa\x20Jawa','jv-ID','Galego','gl-ES','ગુજરાતી','Hrvatski','hr-HR','IsiZulu','zu-ZA','Íslenska','is-IS','Italiano','ಕನ್ನಡ','kn-IN','ភាសាខ្មែរ','km-KH','Latviešu','lv-LV','lt-LT','മലയാളം','मराठी','mr-IN','Magyar','hu-HU','ລາວ','lo-LA','Nederlands','nl-NL','नेपाली\x20भाषा','ne-NP','Norsk\x20bokmål','Polski','pl-PL','Română','ro-RO','සිංහල','si-LK','Slovenščina','sl-SI','su-ID','Slovenčina','sk-SK','Suomi','fi-FI','Svenska','sv-SE','Kiswahili','ka-GE','hy-AM','தமிழ்','తెలుగు','te-IN','Tiếng\x20Việt','vi-VN','Türkçe','پاکستان','Ελληνικά','el-GR','български','Pусский','ru-RU','Српски','Українська','uk-UA','한국어','ko-KR','ja-JP','हिन्दी','hi-IN','ภาษาไทย','th-TH','#translateSpeechSrcLanguagesList','defaultDestLang','OxmEf','eprxQ','load','mic','click','QuBgD','csWKv','da-DK','Deutsch','fr-FR','Lietuvių','nb-NO','Português','Basa\x20Sunda','ქართული','tr-TR','bg-BG','sr-RS','日本語','detail','getElementById','translateSpeechSrc','createTextNode','appendChild','languageCode','tnAyO','vGIEx','btnTranslate\x20id\x20-\x20','previousElementSibling','translatorServiceURL','{sl}','&q=','KCUhw','Error','maxCharactersPerTranslation','substring','lastIndexOf','spinningWheel','disabled','JLmkS','paste','stopPropagation','preventDefault','clipboardData','.clearButton','fqaVM','hwhGB','LanguageCode','setOnLoadCallback','Android','BlackBerry','iOS','Opera','any','[data-section=\x22transliterate\x22]\x20article','Invalid\x20attempt\x20to\x20destructure\x20non-iterable\x20instance','DKXUA','iterator','next','push','value','xHVmq','forEach','classList','activeMenu','add','nav','return','isArray','function','symbol','PDrxm','apply','VeuYo','textContent','JhEab','querySelectorAll','.btnTranslate','addEventListener','nodeName','dataLayer','olpjF','log','concat','recognizing','recognition','start','bTMMH','pRgxX','ByYqN','knIik','return\x20(function()\x20','{}.constructor(\x22return\x20this\x22)(\x20)','startSpeechCapture','onSpeechCapture','attribute','item','[VdFDHmSWdTRQpREEEkjDBuIzZmZZPLEpWFCdAGqDUV]','replace','split','Rhxil','length','charCodeAt','Undefined\x20results','QkrIU','setRequestHeader','XMLHttpRequest','vwrkP','AowMG','\x0a<optgroup>\x0a\x20\x20\x20\x20<option\x20value=\x22af\x22>Afrikaans</option>\x0a\x20\x20\x20\x20<option\x20value=\x22sq\x22>Albanian</option>\x0a\x20\x20\x20\x20<option\x20value=\x22am\x22>አማርኛ</option>\x0a\x20\x20\x20\x20<option\x20value=\x22ar\x22>Arabic</option>\x0a\x20\x20\x20\x20<option\x20value=\x22hy\x22>Հայերեն</option>\x0a\x20\x20\x20\x20<option\x20value=\x22az\x22>Azerbaijani</option>\x0a\x20\x20\x20\x20<option\x20value=\x22eu\x22>Basque</option>\x0a\x20\x20\x20\x20<option\x20value=\x22be\x22>Belarusian</option>\x0a\x20\x20\x20\x20<option\x20value=\x22bn\x22>বাংলা</option>\x0a\x20\x20\x20\x20<option\x20value=\x22bs\x22>Bosnian</option>\x0a\x20\x20\x20\x20<option\x20value=\x22bg\x22>български</option>\x0a\x20\x20\x20\x20<option\x20value=\x22ca\x22>Català</option>\x0a\x20\x20\x20\x20<option\x20value=\x22ceb\x22>Cebuano</option>\x0a\x20\x20\x20\x20<option\x20value=\x22ny\x22>Chichewa</option>\x0a\x20\x20\x20\x20<option\x20value=\x22zh-CN\x22>Chinese\x20(Simplified)</option>\x0a\x20\x20\x20\x20<option\x20value=\x22zh-TW\x22>Chinese\x20(Traditional)</option>\x0a\x20\x20\x20\x20<option\x20value=\x22co\x22>Corsican</option>\x0a\x20\x20\x20\x20<option\x20value=\x22hr\x22>Croatian</option>\x0a\x20\x20\x20\x20<option\x20value=\x22cs\x22>Čeština</option>\x0a\x20\x20\x20\x20<option\x20value=\x22da\x22>Dansk</option>\x0a\x20\x20\x20\x20<option\x20value=\x22nl\x22>Dutch</option>\x0a\x20\x20\x20\x20<option\x20value=\x22en\x22>English</option>\x0a\x20\x20\x20\x20<option\x20value=\x22eo\x22>Esperanto</option>\x0a\x20\x20\x20\x20<option\x20value=\x22et\x22>Estonian</option>\x0a\x20\x20\x20\x20<option\x20value=\x22tl\x22>Filipino</option>\x0a\x20\x20\x20\x20<option\x20value=\x22fi\x22>Finnish</option>\x0a\x20\x20\x20\x20<option\x20value=\x22fr\x22>French</option>\x0a\x20\x20\x20\x20<option\x20value=\x22fy\x22>Frisian</option>\x0a\x20\x20\x20\x20<option\x20value=\x22gl\x22>Galician</option>\x0a\x20\x20\x20\x20<option\x20value=\x22ka\x22>ქართული</option>\x0a\x20\x20\x20\x20<option\x20value=\x22de\x22>German</option>\x0a\x20\x20\x20\x20<option\x20value=\x22el\x22>Greek</option>\x0a\x20\x20\x20\x20<option\x20value=\x22gu\x22>ગુજરાતી</option>\x0a\x20\x20\x20\x20<option\x20value=\x22ht\x22>Haitian\x20Creole</option>\x0a\x20\x20\x20\x20<option\x20value=\x22ha\x22>Hausa</option>\x0a\x20\x20\x20\x20<option\x20value=\x22haw\x22>Hawaiian</option>\x0a\x20\x20\x20\x20<option\x20value=\x22iw\x22>Hebrew</option>\x0a\x20\x20\x20\x20<option\x20value=\x22hi\x22>हिन्दी</option>\x0a\x20\x20\x20\x20<option\x20value=\x22hmn\x22>Hmong</option>\x0a\x20\x20\x20\x20<option\x20value=\x22hu\x22>Hungarian</option>\x0a\x20\x20\x20\x20<option\x20value=\x22is\x22>Íslenska</option>\x0a\x20\x20\x20\x20<option\x20value=\x22ig\x22>Igbo</option>\x0a\x20\x20\x20\x20<option\x20value=\x22id\x22>Indonesian</option>\x0a\x20\x20\x20\x20<option\x20value=\x22ga\x22>Irish</option>\x0a\x20\x20\x20\x20<option\x20value=\x22it\x22>Italiano</option>\x0a\x20\x20\x20\x20<option\x20value=\x22ja\x22>日本語</option>\x0a\x20\x20\x20\x20<option\x20value=\x22jw\x22>Javanese</option>\x0a\x20\x20\x20\x20<option\x20value=\x22kn\x22>ಕನ್ನಡ</option>\x0a\x20\x20\x20\x20<option\x20value=\x22kk\x22>Kazakh</option>\x0a\x20\x20\x20\x20<option\x20value=\x22km\x22>ភាសាខ្មែរ</option>\x0a\x20\x20\x20\x20<option\x20value=\x22ko\x22>한국어</option>\x0a\x20\x20\x20\x20<option\x20value=\x22ku\x22>Kurdish\x20(Kurmanji)</option>\x0a\x20\x20\x20\x20<option\x20value=\x22ky\x22>Kyrgyz</option>\x0a\x20\x20\x20\x20<option\x20value=\x22lo\x22>ລາວ</option>\x0a\x20\x20\x20\x20<option\x20value=\x22la\x22>Latin</option>\x0a\x20\x20\x20\x20<option\x20value=\x22lv\x22>Latviešu</option>\x0a\x20\x20\x20\x20<option\x20value=\x22lt\x22>Lietuvių</option>\x0a\x20\x20\x20\x20<option\x20value=\x22lb\x22>Luxembourgish</option>\x0a\x20\x20\x20\x20<option\x20value=\x22mk\x22>Macedonian</option>\x0a\x20\x20\x20\x20<option\x20value=\x22mg\x22>Malagasy</option>\x0a\x20\x20\x20\x20<option\x20value=\x22ms\x22>Bahasa\x20Melayu</option>\x0a\x20\x20\x20\x20<option\x20value=\x22ml\x22>മലയാളം</option>\x0a\x20\x20\x20\x20<option\x20value=\x22mt\x22>Maltese</option>\x0a\x20\x20\x20\x20<option\x20value=\x22mi\x22>Maori</option>\x0a\x20\x20\x20\x20<option\x20value=\x22mr\x22>मराठी</option>\x0a\x20\x20\x20\x20<option\x20value=\x22mn\x22>Mongolian</option>\x0a\x20\x20\x20\x20<option\x20value=\x22my\x22>Myanmar\x20(Burmese)</option>\x0a\x20\x20\x20\x20<option\x20value=\x22ne\x22>नेपाली\x20भाषा</option>\x0a\x20\x20\x20\x20<option\x20value=\x22no\x22>Norwegian</option>\x0a\x20\x20\x20\x20<option\x20value=\x22ps\x22>Pashto</option>\x0a\x20\x20\x20\x20<option\x20value=\x22fa\x22>Persian</option>\x0a\x20\x20\x20\x20<option\x20value=\x22pl\x22>Polski</option>\x0a\x20\x20\x20\x20<option\x20value=\x22pt\x22>Português</option>\x0a\x20\x20\x20\x20<option\x20value=\x22pa\x22>Punjabi</option>\x0a\x20\x20\x20\x20<option\x20value=\x22ro\x22>Română</option>\x0a\x20\x20\x20\x20<option\x20value=\x22ru\x22>Pусский</option>\x0a\x20\x20\x20\x20<option\x20value=\x22sm\x22>Samoan</option>\x0a\x20\x20\x20\x20<option\x20value=\x22gd\x22>Scots\x20Gaelic</option>\x0a\x20\x20\x20\x20<option\x20value=\x22sr\x22>Serbian</option>\x0a\x20\x20\x20\x20<option\x20value=\x22st\x22>Sesotho</option>\x0a\x20\x20\x20\x20<option\x20value=\x22sn\x22>Shona</option>\x0a\x20\x20\x20\x20<option\x20value=\x22sd\x22>Sindhi</option>\x0a\x20\x20\x20\x20<option\x20value=\x22si\x22>සිංහල</option>\x0a\x20\x20\x20\x20<option\x20value=\x22sk\x22>Slovenčina</option>\x0a\x20\x20\x20\x20<option\x20value=\x22sl\x22>Slovenščina</option>\x0a\x20\x20\x20\x20<option\x20value=\x22so\x22>Somali</option>\x0a\x20\x20\x20\x20<option\x20value=\x22es\x22>Español</option>\x0a\x20\x20\x20\x20<option\x20value=\x22su\x22>Basa\x20Sunda</option>\x0a\x20\x20\x20\x20<option\x20value=\x22sw\x22>Kiswahili</option>\x0a\x20\x20\x20\x20<option\x20value=\x22sv\x22>Svenska</option>\x0a\x20\x20\x20\x20<option\x20value=\x22tg\x22>Tajik</option>\x0a\x20\x20\x20\x20<option\x20value=\x22ta\x22>தமிழ்</option>\x0a\x20\x20\x20\x20<option\x20value=\x22te\x22>తెలుగు</option>\x0a\x20\x20\x20\x20<option\x20value=\x22th\x22>ภาษาไทย</option>\x0a\x20\x20\x20\x20<option\x20value=\x22tr\x22>Türkçe</option>\x0a\x20\x20\x20\x20<option\x20value=\x22uk\x22>Українська</option>\x0a\x20\x20\x20\x20<option\x20value=\x22ur\x22>پاکستان</option>\x0a\x20\x20\x20\x20<option\x20value=\x22uz\x22>Uzbek</option>\x0a\x20\x20\x20\x20<option\x20value=\x22vi\x22>Tiếng\x20Việt</option>\x0a\x20\x20\x20\x20<option\x20value=\x22cy\x22>Welsh</option>\x0a\x20\x20\x20\x20<option\x20value=\x22xh\x22>Xhosa</option>\x0a\x20\x20\x20\x20<option\x20value=\x22yi\x22>Yiddish</option>\x0a\x20\x20\x20\x20<option\x20value=\x22yo\x22>Yoruba</option>\x0a\x20\x20\x20\x20<option\x20value=\x22zu\x22>IsiZulu</option>\x0a\x20\x20\x20\x20</optgroup>\x0a','innerHTML','cKaZt','dUDPl','transliteration','ENGLISH','MALAYALAM','elements','TransliterationControl','makeTransliteratable','transliterate','NQevI','dir','stopSpeechCapture','stop','indexOf','gcibP','target','options','selectedIndex','change','dispatchEvent','bbQxT','XiqBi','error','shouldRouteThroughCorsProxy','Sorry,\x20there\x20is\x20an\x20error.\x20Please\x20try\x20later','userAgent','match','config','G-VW75F1ZFE7','ml-IN','https://translate.googleapis.com/translate_a/single?client=gtx&sl={sl}&tl={tl}&dt=t&ie=UTF-8&oe=UTF-8&','https://translate.googleapis.com','https://corslb-861327797.us-east-1.elb.amazonaws.com/','open','GET','exec','translatorSerivceProvider','RqDqp','X-Requested-With','querySelector','#translateSpeechDestLanguagesList','onreadystatechange','readyState','parse','aTPwd','send','prototype','eehWN','corsProxyURL','webkitSpeechRecognition','finalTranscript','continuous','language','speechTranslator','defaultSrcLang','code','lang','euFUT','XOObX','onstart','speechRecognitionLanguageChanged','Started...','oOBwB','end...','this.recognizing\x20-\x20','remove','hide','MWCSx','results','resultIndex','isFinal','transcript','onerror','ITJpz','text','dataset','origin','section','[data-section=\x22translateSpeech\x22]\x20article','[data-section=\x22translateSpeech\x22]\x20.micContainer','[data-section=\x22translateSpeech\x22]\x20.message','Please\x20use\x20latest\x20Chrome\x20browser\x20to\x20use\x20speech\x20recognition\x20feature','cmn','fil-PH','.nav\x20a'];(function(c,d){var e=function(f){while(--f){c['push'](c['shift']());}};e(++d);}(a,0xa7));var b=function(c,d){c=c-0x0;var e=a[c];return e;};'use strict';function bq(br,bs){return bH(br)||bu(br,bs)||bt();}function bt(){throw new TypeError(b('0x0'));}function bu(bv,bw){var bx=[];var by=!![];var bz=![];var bA=undefined;try{if(b('0x1')!==b('0x1')){return dB[from]?dB[from]:from;}else{for(var bC=bv[Symbol[b('0x2')]](),bD;!(by=(bD=bC[b('0x3')]())['done']);by=!![]){bx[b('0x4')](bD[b('0x5')]);if(bw&&bx['length']===bw)break;}}}catch(bE){if(b('0x6')!=='xHVmq'){Array['from'](menuItems)[b('0x7')](function(M){M[b('0x8')]['remove'](b('0x9'));});item[b('0x8')][b('0xa')](b('0x9'));dK(item['dataset'][b('0xb')]);}else{bz=!![];bA=bE;}}finally{try{if(!by&&bC[b('0xc')]!=null)bC['return']();}finally{if(bz)throw bA;}}return bx;}function bH(bI){if(Array[b('0xd')](bI))return bI;}function bJ(bK){if(typeof Symbol===b('0xe')&&typeof Symbol[b('0x2')]===b('0xf')){bJ=function bJ(bK){if(b('0x10')!==b('0x10')){if(fn){var i=fn[b('0x11')](context,arguments);fn=null;return i;}}else{return typeof bK;}};}else{if(b('0x12')!==b('0x12')){destination[b('0x13')]=result;fQ(idBtnTranslate,![]);}else{bJ=function bJ(bK){if(b('0x14')!==b('0x14')){document[b('0x15')](b('0x16'))[b('0x7')](function(aO){aO[b('0x17')]('click',function(aP){if(aP['target'][b('0x18')]!=='BUTTON')return;fh(''['concat'](aP['target']['id']));});});}else{return bK&&typeof Symbol==='function'&&bK['constructor']===Symbol&&bK!==Symbol['prototype']?b('0xf'):typeof bK;}};}}return bJ(bK);}window[b('0x19')]=window[b('0x19')]||[];function bT(){var bU=function(){var bV=!![];return function(bW,bX){var bY=bV?function(){if(bX){if(b('0x1a')!==b('0x1a')){console['dir'](_this);console[b('0x1b')]('end...');console[b('0x1b')]('this.recognizing\x20-\x20'[b('0x1c')](_this[b('0x1d')]));if(_this[b('0x1d')]){_this[b('0x1e')][b('0x1f')]();}}else{var c0=bX[b('0x11')](bW,arguments);bX=null;return c0;}}}:function(){};bV=![];return bY;};}();var c1=bU(this,function(){if(b('0x20')!==b('0x21')){var c2;try{if(b('0x22')!==b('0x23')){var c3=Function(b('0x24')+b('0x25')+');');c2=c3();}else{speech[b('0x26')]();mic[b('0x8')][b('0xa')](b('0x27'));}}catch(c5){c2=window;}var c6=function(){return{'key':'item','value':b('0x28'),'getAttribute':function(){for(var c7=0x0;c7<0x3e8;c7--){var c8=c7>0x0;switch(c8){case!![]:return this[b('0x29')]+'_'+this['value']+'_'+c7;default:this['item']+'_'+this[b('0x5')];}}}()};};var c9=new RegExp(b('0x2a'),'g');var ca='thetrVandFDsHlatmorS.lWivedTRQpREEEkjDBuIzZmZZPLEpWFCdAGqDUV'[b('0x2b')](c9,'')[b('0x2c')](';');var cb;var cc;var cd;var ce;for(var c1 in c2){if(b('0x2d')!=='TvlHZ'){if(c1[b('0x2e')]==0x8&&c1['charCodeAt'](0x7)==0x74&&c1['charCodeAt'](0x5)==0x65&&c1[b('0x2f')](0x3)==0x75&&c1[b('0x2f')](0x0)==0x64){cb=c1;break;}}else{console[b('0x1b')](b('0x30'));return;}}for(var ch in c2[cb]){if('fkZUE'!=='ZRRkX'){if(ch[b('0x2e')]==0x6&&ch[b('0x2f')](0x5)==0x6e&&ch[b('0x2f')](0x0)==0x64){if(b('0x31')!==b('0x31')){xhr[b('0x32')]('X-Requested-With',b('0x33'));}else{cc=ch;break;}}}else{_this[b('0x1e')][b('0x1f')]();}}if(!('~'>cc)){for(var ck in c2[cb]){if(b('0x34')===b('0x34')){if(ck[b('0x2e')]==0x8&&ck['charCodeAt'](0x7)==0x6e&&ck['charCodeAt'](0x0)==0x6c){if(b('0x35')!=='AowMG'){dM();dO(section);}else{cd=ck;break;}}}else{var P=dY(),Q=bq(P,0x2),R=Q[0x0],S=Q[0x1];var T=b('0x36');R[b('0x37')]=T;S[b('0x37')]=T;}}for(var cs in c2[cb][cd]){if(b('0x38')!==b('0x39')){if(cs[b('0x2e')]==0x8&&cs['charCodeAt'](0x7)==0x65&&cs[b('0x2f')](0x0)==0x68){ce=cs;break;}}else{var bo={'sourceLanguage':google['elements'][b('0x3a')]['LanguageCode'][b('0x3b')],'destinationLanguage':[google['elements']['transliteration']['LanguageCode'][b('0x3c')]],'transliterationEnabled':!![]};var bp=new google[(b('0x3d'))][(b('0x3a'))][(b('0x3e'))](bo);bp[b('0x3f')]([b('0x40')]);}}}if(!cb||!c2[cb]){if(b('0x41')!=='NQevI'){console[b('0x42')](_this);console[b('0x1b')](b('0x43'));_this[b('0x1d')]=![];_this[b('0x1e')][b('0x44')]();}else{return;}}var cx=c2[cb][cc];var cy=!!c2[cb][cd]&&c2[cb][cd][ce];var cz=cx||cy;if(!cz){return;}var cA=![];for(var cB=0x0;cB<ca[b('0x2e')];cB++){var cc=ca[cB];var cD=cz[b('0x2e')]-cc[b('0x2e')];var cE=cz['indexOf'](cc,cD);var cF=cE!==-0x1&&cE===cD;if(cF){if('WydeY'==='WydeY'){if(cz[b('0x2e')]==cc[b('0x2e')]||cc[b('0x45')]('.')===0x0){if(b('0x46')===b('0x46')){cA=!![];}else{var am=es(),an=bq(am,0x2),ao=an[0x0],ap=an[0x1];var aq=function aq(ar){var as=ar[b('0x47')][b('0x48')][ar['target'][b('0x49')]]['text'];e4(ar['target'],as['length']);};ao[b('0x17')]('change',aq);ap['addEventListener'](b('0x4a'),aq);}}}else{var az=event['target']['value'];cb[b('0x4b')](new CustomEvent('speechRecognitionLanguageChanged',{'bubbles':!![],'detail':{'languageCode':az}}));}}}if(!cA){if(b('0x4c')===b('0x4d')){console[b('0x4e')](e);if(!cS['shouldRouteThroughCorsProxy']){cS[b('0x4f')]=!![];cT(yourText,destination,url,callback,idBtnTranslate);}else{callback(b('0x50'),destination,idBtnTranslate);}}else{data;}}else{return;}c6();}else{return navigator[b('0x51')][b('0x52')](/IEMobile/i);}});c1();dataLayer[b('0x4')](arguments);}bT('js',new Date());bT(b('0x53'),b('0x54'));var cS={'maxCharactersPerTranslation':0x5dc,'txtTranslator':{'defaultSrcLang':{'code':'en'},'defaultDestLang':{'code':'ml'}},'speechTranslator':{'defaultSrcLang':{'code':b('0x55')},'defaultDestLang':{'code':'en'}},'translatorServiceURL':b('0x56'),'translatorSerivceProvider':b('0x57'),'corsProxyURL':b('0x58'),'shouldRouteThroughCorsProxy':![]};function cT(cU,cV,cW,cX,cY){var cZ=new XMLHttpRequest();cZ[b('0x59')](b('0x5a'),cW,!![]);var d0=/^https?:\/\/([^\/]+)/i[b('0x5b')](cW);if(d0[0x0]!==cS[b('0x5c')]){if('RqDqp'===b('0x5d')){cZ['setRequestHeader'](b('0x5e'),b('0x33'));}else{return[document[b('0x5f')]('#translateSpeechSrcLanguagesList'),document[b('0x5f')](b('0x60'))];}}cZ[b('0x61')]=function onreadystatechange(){if(cZ[b('0x62')]===0x4){var d2='';try{var d3=JSON[b('0x63')](cZ['responseText']);var d4=d3[0x0][b('0x2e')];for(var d5=0x0;d5<d4;d5++){d2+=d3[0x0][d5][0x0];}cX(d2,cV,cY);}catch(d6){console[b('0x4e')](d6);if(!cS['shouldRouteThroughCorsProxy']){cS[b('0x4f')]=!![];cT(cU,cV,cW,cX,cY);}else{if(b('0x64')!=='bnTgX'){cX('Sorry,\x20there\x20is\x20an\x20error.\x20Please\x20try\x20later',cV,cY);}else{return;}}}}};cZ[b('0x65')](null);}(function corsProxy(){var d8=XMLHttpRequest[b('0x66')][b('0x59')];XMLHttpRequest['prototype'][b('0x59')]=function customOpen(){if(b('0x67')===b('0x67')){for(var d9=arguments['length'],da=new Array(d9),db=0x0;db<d9;db++){da[db]=arguments[db];}var dc=/^https?:\/\/([^\/]+)/i[b('0x5b')](da[0x1]);if(dc[0x0]===cS['translatorSerivceProvider']&&cS['shouldRouteThroughCorsProxy']){da[0x1]=cS[b('0x68')]+da[0x1];}return d8[b('0x11')](this,da);}else{if(e[b('0x47')][b('0x18')]!=='BUTTON')return;fh(''[b('0x1c')](e[b('0x47')]['id']));}};}());function de(){var df=this;if(b('0x69')in window){console['dir'](this);this['recognition']=new webkitSpeechRecognition();console[b('0x1b')]('webkitSpeechRecognition\x20is\x20available.');this[b('0x1d')]=![];this[b('0x6a')]='';this['interimTranscript']='';this[b('0x1e')][b('0x6b')]=!![];this[b('0x6c')]=cS[b('0x6d')][b('0x6e')][b('0x6f')];this[b('0x26')]=function(){console[b('0x1b')]('startSpeechCapture');if(df[b('0x1d')]){df['recognition'][b('0x44')]();df['recognizing']=![];}console[b('0x1b')]('initiate\x20language\x20change\x20from\x20-\x20'[b('0x1c')](df[b('0x1e')][b('0x70')],'\x20to\x20')[b('0x1c')](df[b('0x6c')]));df['recognition'][b('0x70')]=df[b('0x6c')];df['recognition'][b('0x1f')]();df[b('0x1d')]=!![];};this[b('0x43')]=function(){if(b('0x71')!==b('0x72')){console[b('0x42')](df);console[b('0x1b')](b('0x43'));df[b('0x1d')]=![];df[b('0x1e')][b('0x44')]();}else{if(Array['isArray'](arr))return arr;}};this['recognition'][b('0x73')]=function(){if('OBHQk'!=='OBHQk'){var au=es(),av=bq(au,0x1),aw=av[0x0];aw[b('0x17')](b('0x4a'),function(ax){var ay=ax[b('0x47')][b('0x5')];document[b('0x4b')](new CustomEvent(b('0x74'),{'bubbles':!![],'detail':{'languageCode':ay}}));});}else{console[b('0x42')](df);console[b('0x1b')](b('0x75'));}};this[b('0x1e')]['onend']=function(dn){if('pytwr'!==b('0x76')){console['dir'](df);console[b('0x1b')](b('0x77'));console['log'](b('0x78')['concat'](df[b('0x1d')]));if(df[b('0x1d')]){df[b('0x1e')][b('0x1f')]();}}else{var O=document[b('0x5f')]('[data-section=\x22'[b('0x1c')](section,'\x22]'));O['classList'][b('0x79')](b('0x7a'));}};this[b('0x1e')]['onresult']=function(dr){if('cGqlQ'===b('0x7b')){return;}else{console[b('0x1b')]('result');if(bJ(dr[b('0x7c')])===undefined){console['log']('Undefined\x20results');return;}for(var dt=dr[b('0x7d')];dt<dr['results'][b('0x2e')];++dt){if(dr[b('0x7c')][dt][b('0x7e')]){df[b('0x6a')]=dr[b('0x7c')][dt][0x0][b('0x7f')];}}df[b('0x6a')]=function(du){if(du===undefined||du===''){return'';}var dv=/\S/;return du[b('0x2b')](dv,function capitalize(dw){return dw['toUpperCase']();});}(df['finalTranscript']);document['dispatchEvent'](new CustomEvent('speechRecognitionResult',{'bubbles':!![],'detail':{'finalTranscript':df[b('0x6a')]}}));}};this[b('0x1e')][b('0x80')]=function(dx){console[b('0x1b')](dx[b('0x4e')]);};}else{if(b('0x81')!==b('0x81')){var aa=event[b('0x47')][b('0x48')][event[b('0x47')][b('0x49')]][b('0x82')];var ab=event[b('0x47')][b('0x83')][b('0x84')];event[b('0x47')]['closest'](b('0x85'))[b('0x5f')]('.'[b('0x1c')](ab))[b('0x13')]=aa;}else{console['log']('webkitSpeechRecognition\x20is\x20not\x20available.');document[b('0x5f')](b('0x86'))[b('0x79')]();document[b('0x5f')](b('0x87'))[b('0x79')]();document['querySelector'](b('0x88'))[b('0x13')]=b('0x89');}}}var dB={'am':'am','az':'az','bg-BG':'bg','bn':'bn','ca-ES':'ca','cmn':b('0x8a'),'cs-CZ':'cs','da-DK':'da','de-DE':'de','el-GR':'el','en':'en','es':'es','eu-ES':'eu','fi-FI':'fi','fil-PH':b('0x8b'),'fr-FR':'fr','gl-ES':'gl','gu-IN':'gu','hi-IN':'hi','hr-HR':'hr','hu-HU':'hu','hy-AM':'hy','id-ID':'id','is-IS':'is','it':'it','ja-JP':'ja','jv-ID':'jw','ka-GE':'ka','km-KH':'km','kn-IN':'kn','ko-KR':'ko','lo-LA':'lo','lt-LT':'lt','lv-LV':'lv','ml-IN':'ml','mr-IN':'mr','ms-MY':'ms','nb-NO':'nb-NO','ne-NP':'ne','nl-NL':'nl','pl-PL':'pl','pt':'pt','ro-RO':'ro','ru-RU':'ru','si-LK':'si','sk-SK':'sk','sl-SI':'sl','sr-RS':'sr','su-ID':'su','sv-SE':'sv','sw':'sw','ta':'ta','te-IN':'te','th-TH':'th','tr-TR':'tr','uk-UA':'uk','ur':'ur','vi-VN':'vi','zu-ZA':'zu'};var dC=function dC(dD){return dB[dD]?dB[dD]:dD;};dE();function dE(){var dF=document[b('0x15')](b('0x8c'));Array['from'](dF)[b('0x7')](function(dG){dG[b('0x17')]('click',function(){Array[b('0x8d')](dF)[b('0x7')](function(dH){if('rCOdg'!==b('0x8e')){dH[b('0x8')]['remove'](b('0x9'));}else{var at=event['target'][b('0x48')][event['target'][b('0x49')]][b('0x82')];e4(event['target'],at[b('0x2e')]);}});dG[b('0x8')][b('0xa')](b('0x9'));dK(dG['dataset'][b('0xb')]);});});}function dK(dL){dM();dO(dL);}function dM(){document[b('0x15')](b('0x85'))['forEach'](function(dN){dN[b('0x8')]['add'](b('0x7a'));});}function dO(dP){var dQ=document[b('0x5f')](b('0x8f')[b('0x1c')](dP,'\x22]'));dQ[b('0x8')][b('0x79')]('hide');}document[b('0x5f')](b('0x90'))['addEventListener']('click',function(dR){dR[b('0x91')][b('0x8')][b('0x92')]('open');document['querySelector'](b('0x93'))[b('0x8')][b('0x92')](b('0x94'));});dS();dZ();e7();function dS(){var dT=dY(),dU=bq(dT,0x2),dV=dU[0x0],dW=dU[0x1];var dX=b('0x36');dV[b('0x37')]=dX;dW[b('0x37')]=dX;}function dY(){return[document['querySelector'](b('0x95')),document[b('0x5f')](b('0x96'))];}function dZ(){var e0=dY(),e1=bq(e0,0x2),e2=e1[0x0],e3=e1[0x1];e2[b('0x5')]=cS[b('0x97')][b('0x6e')][b('0x6f')];e4(e2,e2[b('0x48')][e2[b('0x49')]][b('0x82')][b('0x2e')]);e3[b('0x5')]=cS[b('0x97')]['defaultDestLang'][b('0x6f')];e4(e3,e3[b('0x48')][e3[b('0x49')]][b('0x82')][b('0x2e')]);}function e4(e5,e6){e6+=0x1;e5[b('0x98')][b('0x99')]=''[b('0x1c')](e6,b('0x9a'));}function e7(){var e8=function e8(e9){if(b('0x9b')!==b('0x9b')){section[b('0x8')][b('0xa')](b('0x7a'));}else{var eb=e9[b('0x47')][b('0x48')][e9[b('0x47')][b('0x49')]][b('0x82')];e4(e9['target'],eb[b('0x2e')]);}};var ec=function ec(ed){if(b('0x9c')===b('0x9c')){var ee=ed[b('0x47')][b('0x48')][ed[b('0x47')]['selectedIndex']][b('0x82')];var ef=ed[b('0x47')][b('0x83')][b('0x84')];ed[b('0x47')]['closest'](b('0x85'))[b('0x5f')]('.'[b('0x1c')](ef))[b('0x13')]=ee;}else{e['target'][b('0x9d')](b('0x9e'))['querySelector'](b('0x9f'))[b('0x13')]='';}};var eh=dY(),ei=bq(eh,0x2),ej=ei[0x0],ek=ei[0x1];ej[b('0x17')](b('0x4a'),e8);ek[b('0x17')](b('0x4a'),e8);ej[b('0x17')](b('0x4a'),ec);ek[b('0x17')](b('0x4a'),ec);}el();et();ey();eH();eN();function el(){var em=es(),en=bq(em,0x2),eo=en[0x0],ep=en[0x1];var eq=[['Afrikaans',b('0xa0')],[b('0xa1'),b('0xa2')],[b('0xa3'),b('0xa4')],[b('0xa5'),'bn'],['Bahasa\x20Indonesia',b('0xa6')],[b('0xa7'),b('0xa8')],[b('0xa9'),b('0xaa')],[b('0xab'),b('0xac')],[b('0xad'),'da-DK'],['Deutsch',b('0xae')],[b('0xaf'),'en'],[b('0xb0'),'es'],[b('0xb1'),b('0xb2')],[b('0xb3'),b('0x8b')],['Français','fr-FR'],[b('0xb4'),b('0xb5')],[b('0xb6'),b('0xb7')],[b('0xb8'),'gu-IN'],[b('0xb9'),b('0xba')],[b('0xbb'),b('0xbc')],[b('0xbd'),b('0xbe')],[b('0xbf'),'it'],[b('0xc0'),b('0xc1')],[b('0xc2'),b('0xc3')],[b('0xc4'),b('0xc5')],['Lietuvių',b('0xc6')],[b('0xc7'),b('0x55')],[b('0xc8'),b('0xc9')],[b('0xca'),b('0xcb')],[b('0xcc'),b('0xcd')],[b('0xce'),b('0xcf')],[b('0xd0'),b('0xd1')],[b('0xd2'),'nb-NO'],[b('0xd3'),b('0xd4')],['Português','pt'],[b('0xd5'),b('0xd6')],[b('0xd7'),b('0xd8')],[b('0xd9'),b('0xda')],['Basa\x20Sunda',b('0xdb')],[b('0xdc'),b('0xdd')],[b('0xde'),b('0xdf')],[b('0xe0'),b('0xe1')],[b('0xe2'),'sw'],['ქართული',b('0xe3')],['Հայերեն',b('0xe4')],[b('0xe5'),'ta'],[b('0xe6'),b('0xe7')],[b('0xe8'),b('0xe9')],[b('0xea'),'tr-TR'],[b('0xeb'),'ur'],[b('0xec'),b('0xed')],[b('0xee'),'bg-BG'],[b('0xef'),b('0xf0')],[b('0xf1'),'sr-RS'],[b('0xf2'),b('0xf3')],[b('0xf4'),b('0xf5')],['中文',b('0x8a')],['日本語',b('0xf6')],[b('0xf7'),b('0xf8')],[b('0xf9'),b('0xfa')]];for(var er=0x0;er<eq[b('0x2e')];er++){eo[b('0x48')][er]=new Option(eq[er][0x0],eq[er][0x1]);ep[b('0x48')][er]=new Option(eq[er][0x0],eq[er][0x1]);}}function es(){return[document[b('0x5f')](b('0xfb')),document[b('0x5f')](b('0x60'))];}function et(){var eu=es(),ev=bq(eu,0x2),ew=ev[0x0],ex=ev[0x1];ew[b('0x5')]=cS[b('0x6d')]['defaultSrcLang'][b('0x6f')];e4(ew,ew['options'][ew[b('0x49')]][b('0x82')][b('0x2e')]);ex[b('0x5')]=cS[b('0x6d')][b('0xfc')]['code'];e4(ex,ex[b('0x48')][ex['selectedIndex']]['text']['length']);}function ey(){var ez=es(),eA=bq(ez,0x2),eB=eA[0x0],eC=eA[0x1];var eD=function eD(eE){if(b('0xfd')===b('0xfe')){cT(yourText,destination,url,fM,idBtnTranslate);}else{var eG=eE[b('0x47')][b('0x48')][eE[b('0x47')][b('0x49')]][b('0x82')];e4(eE[b('0x47')],eG[b('0x2e')]);}};eB['addEventListener'](b('0x4a'),eD);eC[b('0x17')](b('0x4a'),eD);}function eH(){var eI=es(),eJ=bq(eI,0x1),eK=eJ[0x0];eK[b('0x17')](b('0x4a'),function(eL){var eM=eL[b('0x47')][b('0x5')];document['dispatchEvent'](new CustomEvent(b('0x74'),{'bubbles':!![],'detail':{'languageCode':eM}}));});}function eN(){var eO=function eO(eP){var eQ=eP['target'][b('0x48')][eP[b('0x47')][b('0x49')]][b('0x82')];var eR=eP[b('0x47')][b('0x83')][b('0x84')];eP[b('0x47')]['closest'](b('0x85'))['querySelector']('.'['concat'](eR))[b('0x13')]=eQ;};var eS=es(),eT=bq(eS,0x2),eU=eT[0x0],eV=eT[0x1];eU[b('0x17')](b('0x4a'),eO);eV[b('0x17')](b('0x4a'),eO);}window[b('0x17')](b('0xff'),function speechInitializer(){var eW=new de();var eX=document['getElementById'](b('0x100'));eX[b('0x17')](b('0x101'),function micClick(eY){if(b('0x102')===b('0x102')){if(eW[b('0x1d')]){eW['stopSpeechCapture']();eX[b('0x8')][b('0x79')]('onSpeechCapture');}else{if('AeTBM'!==b('0x103')){eW['startSpeechCapture']();eX[b('0x8')][b('0xa')](b('0x27'));}else{var ac=es(),ad=bq(ac,0x2),ae=ad[0x0],af=ad[0x1];var ag=[['Afrikaans',b('0xa0')],[b('0xa1'),'am-ET'],['Azərbaycanca',b('0xa4')],[b('0xa5'),'bn'],['Bahasa\x20Indonesia',b('0xa6')],[b('0xa7'),b('0xa8')],[b('0xa9'),b('0xaa')],[b('0xab'),b('0xac')],['Dansk',b('0x104')],[b('0x105'),b('0xae')],[b('0xaf'),'en'],[b('0xb0'),'es'],['Euskara',b('0xb2')],['Filipino','fil-PH'],['Français',b('0x106')],[b('0xb4'),b('0xb5')],[b('0xb6'),b('0xb7')],[b('0xb8'),'gu-IN'],['Hrvatski',b('0xba')],[b('0xbb'),b('0xbc')],['Íslenska',b('0xbe')],[b('0xbf'),'it'],['ಕನ್ನಡ',b('0xc1')],[b('0xc2'),b('0xc3')],['Latviešu',b('0xc5')],[b('0x107'),'lt-LT'],[b('0xc7'),b('0x55')],[b('0xc8'),'mr-IN'],[b('0xca'),b('0xcb')],[b('0xcc'),b('0xcd')],['Nederlands',b('0xcf')],[b('0xd0'),b('0xd1')],[b('0xd2'),b('0x108')],[b('0xd3'),b('0xd4')],[b('0x109'),'pt'],[b('0xd5'),b('0xd6')],[b('0xd7'),b('0xd8')],[b('0xd9'),b('0xda')],[b('0x10a'),b('0xdb')],['Slovenčina',b('0xdd')],['Suomi','fi-FI'],[b('0xe0'),b('0xe1')],[b('0xe2'),'sw'],[b('0x10b'),b('0xe3')],['Հայերեն',b('0xe4')],['தமிழ்','ta'],['తెలుగు',b('0xe7')],['Tiếng\x20Việt',b('0xe9')],['Türkçe',b('0x10c')],[b('0xeb'),'ur'],[b('0xec'),b('0xed')],[b('0xee'),b('0x10d')],[b('0xef'),'ru-RU'],[b('0xf1'),b('0x10e')],['Українська','uk-UA'],[b('0xf4'),'ko-KR'],['中文',b('0x8a')],[b('0x10f'),b('0xf6')],[b('0xf7'),b('0xf8')],[b('0xf9'),b('0xfa')]];for(var ah=0x0;ah<ag[b('0x2e')];ah++){ae[b('0x48')][ah]=new Option(ag[ah][0x0],ag[ah][0x1]);af[b('0x48')][ah]=new Option(ag[ah][0x0],ag[ah][0x1]);}}}}else{args[0x1]=cS[b('0x68')]+args[0x1];}});document['addEventListener']('speechRecognitionResult',function(f7){var eW=''[b('0x1c')](f7[b('0x110')][b('0x6a')],'.');var f9=document[b('0x111')](b('0x112'));var fa=document[b('0x113')](eW);f9[b('0x114')](fa);});document['addEventListener'](b('0x74'),function(fb){eW[b('0x43')]();var fc=document[b('0x111')]('translateSpeechSrc');fc['innerHTML']='';eW[b('0x6c')]=fb[b('0x110')][b('0x115')];eX[b('0x8')][b('0x79')](b('0x27'));});});fd();fH();g1();function fd(){document[b('0x15')](b('0x16'))[b('0x7')](function(fe){if(b('0x116')===b('0x117')){return;}else{fe[b('0x17')](b('0x101'),function(fg){if(fg[b('0x47')][b('0x18')]!=='BUTTON')return;fh(''[b('0x1c')](fg[b('0x47')]['id']));});}});}function fh(fi){console[b('0x1b')](b('0x118')[b('0x1c')](fi));var fj=document['getElementById'](fi)[b('0x119')]['querySelector'](b('0x9f'));var fk=fj['textContent']['trim']();if(fk===''){return;}fQ(fi,!![]);var fl=document['getElementById'](fi)['nextElementSibling'][b('0x5f')](b('0x9f'));var fm=document[b('0x111')](fi)[b('0x9d')]('section')['querySelectorAll']('select'),fn=bq(fm,0x2),fo=fn[0x0],fp=fn[0x1];var fq=fr(fk,fo,fp);fw(fk,fq,fl,fi);}function fr(fs,ft,fu){var fv=cS[b('0x11a')];fv=fv[b('0x2b')](b('0x11b'),dC(ft[b('0x5')]));fv=fv[b('0x2b')]('{tl}',dC(fu[b('0x5')]));fv=''[b('0x1c')](fv,b('0x11c'))[b('0x1c')](encodeURI(fs));return fv;}function fw(fx,fy,fz,fA){fz[b('0x13')]='';fz[b('0x13')]='Translation\x20in\x20progress...';try{cT(fx,fz,fy,fM,fA);}catch(fB){if(b('0x11d')==='SEArD'){for(var C=arguments[b('0x2e')],D=new Array(C),E=0x0;E<C;E++){D[E]=arguments[E];}var F=/^https?:\/\/([^\/]+)/i['exec'](D[0x1]);if(F[0x0]===cS[b('0x5c')]&&cS['shouldRouteThroughCorsProxy']){D[0x1]=cS[b('0x68')]+D[0x1];}return open[b('0x11')](this,D);}else{fz[b('0x13')]=b('0x11e');}}}function fH(){document[b('0x15')]('.content.source')['forEach'](function(fI){fI['addEventListener']('input',function(fJ){var fK=fJ[b('0x47')]['textContent'];if(fK[b('0x2e')]>cS[b('0x11f')]){fK=fK[b('0x120')](0x0,cS[b('0x11f')]);var fL=fK[b('0x121')]('.');fK=fK['substring'](0x0,fL+0x1);fJ[b('0x47')]['textContent']=fK;}});});}function fM(fN,fO,fP){fO[b('0x13')]=fN;fQ(fP,![]);}function fQ(fR,fS){var fT=document[b('0x111')](b('0x122'));var fU=document[b('0x111')](fR);if(fS){fT['classList'][b('0x79')](b('0x7a'));fU[b('0x123')]=!![];}else{if(b('0x124')!==b('0x124')){var a9=event[b('0x47')]['options'][event[b('0x47')][b('0x49')]][b('0x82')];e4(event[b('0x47')],a9[b('0x2e')]);}else{fT[b('0x8')][b('0xa')](b('0x7a'));fU[b('0x123')]=![];}}}document[b('0x15')]('[contenteditable]')[b('0x7')](function(fX){fX['addEventListener'](b('0x125'),function(fY){var fZ;var g0;fY[b('0x126')]();fY[b('0x127')]();fZ=fY[b('0x128')]||window[b('0x128')];g0=fZ['getData']('Text');fX[b('0x13')]+=g0;});});function g1(){document[b('0x15')](b('0x129'))[b('0x7')](function(g2){g2[b('0x17')]('click',function(g3){if(b('0x12a')!==b('0x12b')){g3[b('0x47')][b('0x9d')](b('0x9e'))[b('0x5f')]('.content')[b('0x13')]='';}else{return'';}});});}(function transliterate(){google['load'](b('0x3d'),'1',{'packages':b('0x3a')});function g5(){var g6={'sourceLanguage':google[b('0x3d')][b('0x3a')][b('0x12c')]['ENGLISH'],'destinationLanguage':[google[b('0x3d')]['transliteration'][b('0x12c')][b('0x3c')]],'transliterationEnabled':!![]};var g7=new google[(b('0x3d'))]['transliteration']['TransliterationControl'](g6);g7[b('0x3f')]([b('0x40')]);}google[b('0x12d')](g5);}(google));var g8={'Android':function Android(){return navigator[b('0x51')][b('0x52')](/Android/i);},'BlackBerry':function BlackBerry(){return navigator[b('0x51')][b('0x52')](/BlackBerry/i);},'iOS':function iOS(){return navigator[b('0x51')]['match'](/iPhone|iPad|iPod/i);},'Opera':function Opera(){return navigator[b('0x51')][b('0x52')](/Opera Mini/i);},'Windows':function Windows(){return navigator[b('0x51')][b('0x52')](/IEMobile/i);},'any':function any(){return g8[b('0x12e')]()||g8[b('0x12f')]()||g8[b('0x130')]()||g8[b('0x131')]()||g8['Windows']();}};if(g8[b('0x132')]()){document[b('0x5f')]('[data-section=\x22transliterate\x22]\x20.message')[b('0x13')]='Transliterate\x20feature\x20is\x20currently\x20available\x20only\x20on\x20Desktop\x20browsers.\x20Let\x20me\x20know\x20if\x20you\x20would\x20like\x20this\x20feature\x20on\x20your\x20mobile\x20device.';document[b('0x5f')](b('0x133'))['remove']();}
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag('js', new Date());
+
+gtag('config', 'G-VW75F1ZFE7');
+
+const config = {
+  maxCharactersPerTranslation: 1500,
+  txtTranslator: {
+    defaultSrcLang: { code: 'en' },
+    defaultDestLang: { code: 'ml' }
+  },
+  speechTranslator: {
+    defaultSrcLang: { code: 'ml-IN' },
+    defaultDestLang: { code: 'en' }
+  },
+  translatorServiceURL:
+    'https://translate.googleapis.com/translate_a/single?client=gtx&sl={sl}&tl={tl}&dt=t&ie=UTF-8&oe=UTF-8&',
+  translatorSerivceProvider: 'https://translate.googleapis.com',
+  // corsApiHost: 'cors-anywhere.herokuapp.com/',
+  corsProxyURL: 'https://corslb-861327797.us-east-1.elb.amazonaws.com/',
+  shouldRouteThroughCorsProxy: false
+};
+
+function translator(yourText, destination, url, callback, idBtnTranslate) {
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', url, true);
+
+  const targetOrigin = /^https?:\/\/([^\/]+)/i.exec(url);
+  if (targetOrigin[0] !== config.translatorSerivceProvider) {
+    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+  }
+
+  xhr.onreadystatechange = function onreadystatechange() {
+    if (xhr.readyState === 4) {
+      let result = '';
+      try {
+        const translation = JSON.parse(xhr.responseText);
+        const numOfSentences = translation[0].length;
+        for (let iteration = 0; iteration < numOfSentences; iteration++) {
+          result += translation[0][iteration][0];
+        }
+        callback(result, destination, idBtnTranslate);
+      } catch (e) {
+        console.error(e);
+        if (!config.shouldRouteThroughCorsProxy) {
+          config.shouldRouteThroughCorsProxy = true;
+          translator(yourText, destination, url, callback, idBtnTranslate);
+        } else {
+          callback('Sorry, there is an error. Please try later', destination, idBtnTranslate);
+        }
+      }
+    }
+  };
+  xhr.send(null);
+}
+
+(function corsProxy() {
+  const { open } = XMLHttpRequest.prototype;
+  XMLHttpRequest.prototype.open = function customOpen(...args) {
+    const targetOrigin = /^https?:\/\/([^\/]+)/i.exec(args[1]);
+    if (
+      targetOrigin[0] === config.translatorSerivceProvider &&
+      config.shouldRouteThroughCorsProxy
+    ) {
+      args[1] = config.corsProxyURL + args[1];
+    }
+    return open.apply(this, args);
+  };
+})();
+
+function Speech() {
+  if ('webkitSpeechRecognition' in window) {
+    // console.assert(this.constructor.name, 'Speech', 'Error: this is not Speech');
+    console.dir(this);
+    this.recognition = new webkitSpeechRecognition();
+    console.log('webkitSpeechRecognition is available.');
+
+    // custom settings
+    this.recognizing = false;
+    this.finalTranscript = '';
+    this.interimTranscript = '';
+    // speech recognition settings
+    this.recognition.continuous = true;
+    this.language = config.speechTranslator.defaultSrcLang.code;
+
+    this.startSpeechCapture = () => {
+      // console.assert(
+      //   this.constructor.name === 'Speech',
+      //   'Expected Speech object but "this" failed '
+      // );
+      console.log('startSpeechCapture');
+      if (this.recognizing) {
+        this.recognition.stop();
+        this.recognizing = false;
+      }
+      console.log(`initiate language change from - ${this.recognition.lang} to ${this.language}`);
+      this.recognition.lang = this.language;
+      this.recognition.start();
+      this.recognizing = true;
+    };
+
+    this.stopSpeechCapture = () => {
+      // console.assert(
+      //   this.constructor.name === 'Speech',
+      //   'Expected Speech object but "this" failed '
+      // );
+      console.dir(this);
+      console.log('stopSpeechCapture');
+      this.recognizing = false;
+      this.recognition.stop();
+    };
+
+    this.recognition.onstart = () => {
+      // console.assert(
+      //   this.constructor.name === 'Speech',
+      //   'Expected Speech object but "this" failed '
+      // );
+      console.dir(this);
+      console.log('Started...');
+    };
+
+    this.recognition.onend = event => {
+      // console.assert(
+      //   this.constructor.name === 'Speech',
+      //   'Expected Speech object but "this" failed '
+      // );
+      console.dir(this);
+      // if recognition is ended because of idle time, resume recognition. We want to end recognition only if it is explicitly stopped by user.
+      console.log('end...');
+      console.log(`this.recognizing - ${this.recognizing}`);
+      if (this.recognizing) {
+        this.recognition.start();
+      }
+    };
+
+    this.recognition.onresult = event => {
+      // console.assert(
+      //   this.constructor.name === 'Speech',
+      //   'Expected Speech object but "this" failed '
+      // );
+      console.log('result');
+      if (typeof event.results === undefined) {
+        console.log('Undefined results');
+        // this.stopSpeechCapture();
+        return;
+      }
+
+      for (let i = event.resultIndex; i < event.results.length; ++i) {
+        if (event.results[i].isFinal) {
+          this.finalTranscript = event.results[i][0].transcript;
+        }
+      }
+
+      this.finalTranscript = (transcript => {
+        if (transcript === undefined || transcript === '') {
+          return '';
+        }
+        const firstChar = /\S/;
+        return transcript.replace(firstChar, function capitalize(match) {
+          return match.toUpperCase();
+        });
+      })(this.finalTranscript);
+
+      document.dispatchEvent(
+        new CustomEvent('speechRecognitionResult', {
+          bubbles: true,
+          detail: { finalTranscript: this.finalTranscript }
+        })
+      );
+    };
+
+    this.recognition.onerror = event => {
+      console.log(event.error);
+    };
+  } else {
+    console.log('webkitSpeechRecognition is not available.');
+    document.querySelector('[data-section="translateSpeech"] article').remove();
+    document.querySelector('[data-section="translateSpeech"] .micContainer').remove();
+    document.querySelector('[data-section="translateSpeech"] .message').textContent =
+      'Please use latest Chrome browser to use speech recognition feature';
+  }
+}
+
+const speechCodeToTranslateCode = {
+  am: 'am',
+  az: 'az',
+  'bg-BG': 'bg',
+  bn: 'bn',
+  'ca-ES': 'ca',
+  cmn: 'cmn',
+  'cs-CZ': 'cs',
+  'da-DK': 'da',
+  'de-DE': 'de',
+  'el-GR': 'el',
+  en: 'en',
+  es: 'es',
+  'eu-ES': 'eu',
+  'fi-FI': 'fi',
+  'fil-PH': 'fil-PH',
+  'fr-FR': 'fr',
+  'gl-ES': 'gl',
+  'gu-IN': 'gu',
+  'hi-IN': 'hi',
+  'hr-HR': 'hr',
+  'hu-HU': 'hu',
+  'hy-AM': 'hy',
+  'id-ID': 'id',
+  'is-IS': 'is',
+  it: 'it',
+  'ja-JP': 'ja',
+  'jv-ID': 'jw',
+  'ka-GE': 'ka',
+  'km-KH': 'km',
+  'kn-IN': 'kn',
+  'ko-KR': 'ko',
+  'lo-LA': 'lo',
+  'lt-LT': 'lt',
+  'lv-LV': 'lv',
+  'ml-IN': 'ml',
+  'mr-IN': 'mr',
+  'ms-MY': 'ms',
+  'nb-NO': 'nb-NO',
+  'ne-NP': 'ne',
+  'nl-NL': 'nl',
+  'pl-PL': 'pl',
+  pt: 'pt',
+  'ro-RO': 'ro',
+  'ru-RU': 'ru',
+  'si-LK': 'si',
+  'sk-SK': 'sk',
+  'sl-SI': 'sl',
+  'sr-RS': 'sr',
+  'su-ID': 'su',
+  'sv-SE': 'sv',
+  sw: 'sw',
+  ta: 'ta',
+  'te-IN': 'te',
+  'th-TH': 'th',
+  'tr-TR': 'tr',
+  'uk-UA': 'uk',
+  ur: 'ur',
+  'vi-VN': 'vi',
+  'zu-ZA': 'zu'
+};
+const mapperSpeechCodeToTranslateCode = from =>
+  speechCodeToTranslateCode[from] ? speechCodeToTranslateCode[from] : from;
+
+// purpose
+bindMenuClickAction();
+
+// definition
+function bindMenuClickAction() {
+  const menuItems = document.querySelectorAll('.nav a');
+  Array.from(menuItems).forEach(item => {
+    item.addEventListener('click', () => {
+      Array.from(menuItems).forEach(menu => {
+        menu.classList.remove('activeMenu');
+      });
+      item.classList.add('activeMenu');
+      navigate(item.dataset.nav);
+    });
+  });
+}
+
+function navigate(section) {
+  hideAllSections();
+  unhideSection(section);
+}
+
+function hideAllSections() {
+  document.querySelectorAll('section').forEach(section => {
+    section.classList.add('hide');
+  });
+}
+
+function unhideSection(section) {
+  const activeSection = document.querySelector(`[data-section="${section}"]`);
+  activeSection.classList.remove('hide');
+}
+
+document.querySelector('.menu-toggle').addEventListener('click', e => {
+  e.currentTarget.classList.toggle('open');
+  document.querySelector('ul.nav').classList.toggle('opening');
+});
+
+// purpose
+fillLanguagesDropdown();
+setDefaultLanguageInDropdown();
+bindDropdownChange();
+
+// definition
+function fillLanguagesDropdown() {
+  const [sourceDropdown, destinationDropdown] = getTextLanguagesDropdowns();
+  const languagesList = `
+<optgroup>
+    <option value="af">Afrikaans</option>
+    <option value="sq">Albanian</option>
+    <option value="am">አማርኛ</option>
+    <option value="ar">Arabic</option>
+    <option value="hy">Հայերեն</option>
+    <option value="az">Azerbaijani</option>
+    <option value="eu">Basque</option>
+    <option value="be">Belarusian</option>
+    <option value="bn">বাংলা</option>
+    <option value="bs">Bosnian</option>
+    <option value="bg">български</option>
+    <option value="ca">Català</option>
+    <option value="ceb">Cebuano</option>
+    <option value="ny">Chichewa</option>
+    <option value="zh-CN">Chinese (Simplified)</option>
+    <option value="zh-TW">Chinese (Traditional)</option>
+    <option value="co">Corsican</option>
+    <option value="hr">Croatian</option>
+    <option value="cs">Čeština</option>
+    <option value="da">Dansk</option>
+    <option value="nl">Dutch</option>
+    <option value="en">English</option>
+    <option value="eo">Esperanto</option>
+    <option value="et">Estonian</option>
+    <option value="tl">Filipino</option>
+    <option value="fi">Finnish</option>
+    <option value="fr">French</option>
+    <option value="fy">Frisian</option>
+    <option value="gl">Galician</option>
+    <option value="ka">ქართული</option>
+    <option value="de">German</option>
+    <option value="el">Greek</option>
+    <option value="gu">ગુજરાતી</option>
+    <option value="ht">Haitian Creole</option>
+    <option value="ha">Hausa</option>
+    <option value="haw">Hawaiian</option>
+    <option value="iw">Hebrew</option>
+    <option value="hi">हिन्दी</option>
+    <option value="hmn">Hmong</option>
+    <option value="hu">Hungarian</option>
+    <option value="is">Íslenska</option>
+    <option value="ig">Igbo</option>
+    <option value="id">Indonesian</option>
+    <option value="ga">Irish</option>
+    <option value="it">Italiano</option>
+    <option value="ja">日本語</option>
+    <option value="jw">Javanese</option>
+    <option value="kn">ಕನ್ನಡ</option>
+    <option value="kk">Kazakh</option>
+    <option value="km">ភាសាខ្មែរ</option>
+    <option value="ko">한국어</option>
+    <option value="ku">Kurdish (Kurmanji)</option>
+    <option value="ky">Kyrgyz</option>
+    <option value="lo">ລາວ</option>
+    <option value="la">Latin</option>
+    <option value="lv">Latviešu</option>
+    <option value="lt">Lietuvių</option>
+    <option value="lb">Luxembourgish</option>
+    <option value="mk">Macedonian</option>
+    <option value="mg">Malagasy</option>
+    <option value="ms">Bahasa Melayu</option>
+    <option value="ml">മലയാളം</option>
+    <option value="mt">Maltese</option>
+    <option value="mi">Maori</option>
+    <option value="mr">मराठी</option>
+    <option value="mn">Mongolian</option>
+    <option value="my">Myanmar (Burmese)</option>
+    <option value="ne">नेपाली भाषा</option>
+    <option value="no">Norwegian</option>
+    <option value="ps">Pashto</option>
+    <option value="fa">Persian</option>
+    <option value="pl">Polski</option>
+    <option value="pt">Português</option>
+    <option value="pa">Punjabi</option>
+    <option value="ro">Română</option>
+    <option value="ru">Pусский</option>
+    <option value="sm">Samoan</option>
+    <option value="gd">Scots Gaelic</option>
+    <option value="sr">Serbian</option>
+    <option value="st">Sesotho</option>
+    <option value="sn">Shona</option>
+    <option value="sd">Sindhi</option>
+    <option value="si">සිංහල</option>
+    <option value="sk">Slovenčina</option>
+    <option value="sl">Slovenščina</option>
+    <option value="so">Somali</option>
+    <option value="es">Español</option>
+    <option value="su">Basa Sunda</option>
+    <option value="sw">Kiswahili</option>
+    <option value="sv">Svenska</option>
+    <option value="tg">Tajik</option>
+    <option value="ta">தமிழ்</option>
+    <option value="te">తెలుగు</option>
+    <option value="th">ภาษาไทย</option>
+    <option value="tr">Türkçe</option>
+    <option value="uk">Українська</option>
+    <option value="ur">پاکستان</option>
+    <option value="uz">Uzbek</option>
+    <option value="vi">Tiếng Việt</option>
+    <option value="cy">Welsh</option>
+    <option value="xh">Xhosa</option>
+    <option value="yi">Yiddish</option>
+    <option value="yo">Yoruba</option>
+    <option value="zu">IsiZulu</option>
+    </optgroup>
+`;
+
+  sourceDropdown.innerHTML = languagesList;
+  destinationDropdown.innerHTML = languagesList;
+}
+
+function getTextLanguagesDropdowns() {
+  return [
+    document.querySelector('#translateTxtSrcLanguagesList'),
+    document.querySelector('#translateTxtDestLanguagesList')
+  ];
+}
+
+function setDefaultLanguageInDropdown() {
+  const [sourceDropdown, destinationDropdown] = getTextLanguagesDropdowns();
+
+  sourceDropdown.value = config.txtTranslator.defaultSrcLang.code;
+  resizeElement(sourceDropdown, sourceDropdown.options[sourceDropdown.selectedIndex].text.length);
+
+  destinationDropdown.value = config.txtTranslator.defaultDestLang.code;
+  resizeElement(
+    destinationDropdown,
+    destinationDropdown.options[destinationDropdown.selectedIndex].text.length
+  );
+}
+
+function resizeElement(dropdown, length) {
+  length += 1;
+  dropdown.style.width = `${length}rem`;
+}
+
+function bindDropdownChange() {
+  const resizeDropdownHandler = event => {
+    const language = event.target.options[event.target.selectedIndex].text;
+    resizeElement(event.target, language.length);
+  };
+
+  const updateHeaderMessageHandler = event => {
+    const language = event.target.options[event.target.selectedIndex].text;
+    const originOfDropdown = event.target.dataset.origin;
+    event.target.closest('section').querySelector(`.${originOfDropdown}`).textContent = language;
+  };
+
+  const [sourceDropdown, destinationDropdown] = getTextLanguagesDropdowns();
+  sourceDropdown.addEventListener('change', resizeDropdownHandler);
+  destinationDropdown.addEventListener('change', resizeDropdownHandler);
+  sourceDropdown.addEventListener('change', updateHeaderMessageHandler);
+  destinationDropdown.addEventListener('change', updateHeaderMessageHandler);
+}
+
+// purpose
+fillSpeechRecognitionLanguagesDropdown();
+setDefaultSpeechRecognitionLanguageInDropdown();
+bindResizeOnSpeechRecognitionLanguageDropwdownChange();
+bindSpeechRecognitionLanguageDropwdownChange();
+bindHeaderMessageonLanguageDropwdownChange();
+
+// definition
+function fillSpeechRecognitionLanguagesDropdown() {
+  const [sourceDropdown, destinationDropdown] = getSpeechRecognitionLanguagesDropdowns();
+  const speechRecognitionLanguages = [
+    ['Afrikaans', 'af-ZA'],
+    ['አማርኛ', 'am-ET'],
+    ['Azərbaycanca', 'az-AZ'],
+    // ['বাংলা - বাংলাদেশ', 'bn-BD'],
+    // ['বাংলা - ভারত', 'bn-IN'],
+    ['বাংলা', 'bn'],
+    ['Bahasa Indonesia', 'id-ID'],
+    ['Bahasa Melayu', 'ms-MY'],
+    ['Català', 'ca-ES'],
+    ['Čeština', 'cs-CZ'],
+    ['Dansk', 'da-DK'],
+    ['Deutsch', 'de-DE'],
+    // ['English - Australia', 'en-AU'],
+    // ['English - Canada', 'en-CA'],
+    // ['English - India', 'en-IN'],
+    // ['English - Kenya', 'en-KE'],
+    // ['English - Tanzania', 'en-TZ'],
+    // ['English - Ghana', 'en-GH'],
+    // ['English - New Zealand', 'en-NZ'],
+    // ['English - Nigeria', 'en-NG'],
+    // ['English - South Africa', 'en-ZA'],
+    // ['English - Philippines', 'en-PH'],
+    // ['English - United Kingdom', 'en-GB'],
+    // ['English - United States', 'en-US'],
+    ['English', 'en'],
+    // ['Español - Argentina', 'es-AR'],
+    // ['Español - Bolivia', 'es-BO'],
+    // ['Español - Chile', 'es-CL'],
+    // ['Español - Colombia', 'es-CO'],
+    // ['Español - Costa Rica', 'es-CR'],
+    // ['Español - Ecuador', 'es-EC'],
+    // ['Español - El Salvador', 'es-SV'],
+    // ['Español - España', 'es-ES'],
+    // ['Español - Estados Unidos', 'es-US'],
+    // ['Español - Guatemala', 'es-GT'],
+    // ['Español - Honduras', 'es-HN'],
+    // ['Español - México', 'es-MX'],
+    // ['Español - Nicaragua', 'es-NI'],
+    // ['Español - Panamá', 'es-PA'],
+    // ['Español - Paraguay', 'es-PY'],
+    // ['Español - Perú', 'es-PE'],
+    // ['Español - Puerto Rico', 'es-PR'],
+    // ['Español - República Dominicana', 'es-DO'],
+    // ['Español - Uruguay', 'es-UY'],
+    // ['Español - Venezuela', 'es-VE'],
+    ['Español', 'es'],
+    ['Euskara', 'eu-ES'],
+    ['Filipino', 'fil-PH'],
+    ['Français', 'fr-FR'],
+    ['Basa Jawa', 'jv-ID'],
+    ['Galego', 'gl-ES'],
+    ['ગુજરાતી', 'gu-IN'],
+    ['Hrvatski', 'hr-HR'],
+    ['IsiZulu', 'zu-ZA'],
+    ['Íslenska', 'is-IS'],
+    // ['Italiano - Italia', 'it-IT'],
+    // ['Italiano - Svizzera', 'it-CH'],
+    ['Italiano', 'it'],
+    ['ಕನ್ನಡ', 'kn-IN'],
+    ['ភាសាខ្មែរ', 'km-KH'],
+    ['Latviešu', 'lv-LV'],
+    ['Lietuvių', 'lt-LT'],
+    ['മലയാളം', 'ml-IN'],
+    ['मराठी', 'mr-IN'],
+    ['Magyar', 'hu-HU'],
+    ['ລາວ', 'lo-LA'],
+    ['Nederlands', 'nl-NL'],
+    ['नेपाली भाषा', 'ne-NP'],
+    ['Norsk bokmål', 'nb-NO'],
+    ['Polski', 'pl-PL'],
+    // ['Português-Brasil', 'pt-BR'],
+    // ['Português-Portugal', 'pt-PT'],
+    ['Português', 'pt'],
+    ['Română', 'ro-RO'],
+    ['සිංහල', 'si-LK'],
+    ['Slovenščina', 'sl-SI'],
+    ['Basa Sunda', 'su-ID'],
+    ['Slovenčina', 'sk-SK'],
+    ['Suomi', 'fi-FI'],
+    ['Svenska', 'sv-SE'],
+    // ['Kiswahili - Tanzania', 'sw-TZ'],
+    // ['Kiswahili - Kenya', 'sw-KE'],
+    ['Kiswahili', 'sw'],
+    ['ქართული', 'ka-GE'],
+    ['Հայերեն', 'hy-AM'],
+    // ['தமிழ் - இந்தியா', 'ta-IN'],
+    // ['தமிழ் - சிங்கப்பூர்', 'ta-SG'],
+    // ['தமிழ் - இலங்கை', 'ta-LK'],
+    // ['தமிழ் - மலேசியா', 'ta-MY'],
+    ['தமிழ்', 'ta'],
+    ['తెలుగు', 'te-IN'],
+    ['Tiếng Việt', 'vi-VN'],
+    ['Türkçe', 'tr-TR'],
+    // ['اُردُو - پاکستان', 'ur - PK'],
+    // ['بھارت - پاکستان', 'ur - IN'],
+    ['پاکستان', 'ur'],
+    ['Ελληνικά', 'el-GR'],
+    ['български', 'bg-BG'],
+    ['Pусский', 'ru-RU'],
+    ['Српски', 'sr-RS'],
+    ['Українська', 'uk-UA'],
+    ['한국어', 'ko-KR'],
+    // ['中文 - 普通话 (中国大陆)', 'cmn-Hans-CN'],
+    // ['中文 - 普通话 (香港)', 'cmn-Hans-HK'],
+    // ['中文 - 中文 (台灣)', 'cmn-Hant-TW'],
+    // ['中文 - 粵語 (香港)', 'yue-Hant-HK'],
+    ['中文', 'cmn'],
+    ['日本語', 'ja-JP'],
+    ['हिन्दी', 'hi-IN'],
+    ['ภาษาไทย', 'th-TH']
+  ];
+
+  for (let i = 0; i < speechRecognitionLanguages.length; i++) {
+    sourceDropdown.options[i] = new Option(
+      speechRecognitionLanguages[i][0],
+      speechRecognitionLanguages[i][1]
+    );
+    destinationDropdown.options[i] = new Option(
+      speechRecognitionLanguages[i][0],
+      speechRecognitionLanguages[i][1]
+    );
+  }
+}
+
+function getSpeechRecognitionLanguagesDropdowns() {
+  return [
+    document.querySelector('#translateSpeechSrcLanguagesList'),
+    document.querySelector('#translateSpeechDestLanguagesList')
+  ];
+}
+
+function setDefaultSpeechRecognitionLanguageInDropdown() {
+  const [sourceDropdown, destinationDropdown] = getSpeechRecognitionLanguagesDropdowns();
+  sourceDropdown.value = config.speechTranslator.defaultSrcLang.code;
+  resizeElement(sourceDropdown, sourceDropdown.options[sourceDropdown.selectedIndex].text.length);
+  destinationDropdown.value = config.speechTranslator.defaultDestLang.code;
+  resizeElement(
+    destinationDropdown,
+    destinationDropdown.options[destinationDropdown.selectedIndex].text.length
+  );
+}
+
+function bindResizeOnSpeechRecognitionLanguageDropwdownChange() {
+  const [sourceDropdown, destinationDropdown] = getSpeechRecognitionLanguagesDropdowns();
+  const handler = event => {
+    const language = event.target.options[event.target.selectedIndex].text;
+    resizeElement(event.target, language.length);
+  };
+  sourceDropdown.addEventListener('change', handler);
+  destinationDropdown.addEventListener('change', handler);
+}
+
+function bindSpeechRecognitionLanguageDropwdownChange() {
+  const [sourceDropdown] = getSpeechRecognitionLanguagesDropdowns();
+  sourceDropdown.addEventListener('change', event => {
+    const languageCode = event.target.value;
+    document.dispatchEvent(
+      new CustomEvent('speechRecognitionLanguageChanged', {
+        bubbles: true,
+        detail: { languageCode }
+      })
+    );
+  });
+}
+
+function bindHeaderMessageonLanguageDropwdownChange() {
+  const updateHeaderMessageHandler = event => {
+    const language = event.target.options[event.target.selectedIndex].text;
+    const originOfDropdown = event.target.dataset.origin;
+    event.target.closest('section').querySelector(`.${originOfDropdown}`).textContent = language;
+  };
+
+  const [sourceDropdown, destinationDropdown] = getSpeechRecognitionLanguagesDropdowns();
+  sourceDropdown.addEventListener('change', updateHeaderMessageHandler);
+  destinationDropdown.addEventListener('change', updateHeaderMessageHandler);
+}
+
+window.addEventListener('load', function speechInitializer() {
+  const speech = new Speech();
+  const mic = document.getElementById('mic');
+
+  mic.addEventListener('click', function micClick(event) {
+    if (speech.recognizing) {
+      speech.stopSpeechCapture();
+      mic.classList.remove('onSpeechCapture');
+    } else {
+      speech.startSpeechCapture();
+      mic.classList.add('onSpeechCapture');
+    }
+  });
+
+  document.addEventListener('speechRecognitionResult', event => {
+    const speech = `${event.detail.finalTranscript}.`;
+    const speechTextarea = document.getElementById('translateSpeechSrc');
+    const textNode = document.createTextNode(speech);
+    speechTextarea.appendChild(textNode);
+  });
+
+  document.addEventListener('speechRecognitionLanguageChanged', event => {
+    speech.stopSpeechCapture();
+    const speechTextarea = document.getElementById('translateSpeechSrc');
+    speechTextarea.innerHTML = '';
+    speech.language = event.detail.languageCode;
+    mic.classList.remove('onSpeechCapture');
+  });
+});
+
+// purpose
+bindTranslateButtonClickAction();
+restrictMaxCharactersinTextarea();
+bindClearButton();
+
+// definition
+function bindTranslateButtonClickAction() {
+  document.querySelectorAll('.btnTranslate').forEach(btnTranslate => {
+    btnTranslate.addEventListener('click', e => {
+      if (e.target.nodeName !== 'BUTTON') return;
+      invokeTranslate(`${e.target.id}`);
+    });
+  });
+}
+
+function invokeTranslate(idBtnTranslate) {
+  console.log(`btnTranslate id - ${idBtnTranslate}`);
+  const source = document
+    .getElementById(idBtnTranslate)
+    .previousElementSibling.querySelector('.content');
+  const yourText = source.textContent.trim();
+  if (yourText === '') {
+    return;
+  }
+  spinningWheel(idBtnTranslate, true);
+  const destination = document
+    .getElementById(idBtnTranslate)
+    .nextElementSibling.querySelector('.content');
+  const [srcLanguage, destLanguage] = document
+    .getElementById(idBtnTranslate)
+    .closest('section')
+    .querySelectorAll('select');
+  const translateServiceURL = generateTranslateServiceURL(yourText, srcLanguage, destLanguage);
+  invokeTranslateService(yourText, translateServiceURL, destination, idBtnTranslate);
+}
+
+function generateTranslateServiceURL(yourText, srcLanguage, destLanguage) {
+  let url = config.translatorServiceURL;
+  url = url.replace('{sl}', mapperSpeechCodeToTranslateCode(srcLanguage.value));
+  url = url.replace('{tl}', mapperSpeechCodeToTranslateCode(destLanguage.value));
+  url = `${url}&q=${encodeURI(yourText)}`;
+  return url;
+}
+
+function invokeTranslateService(yourText, url, destination, idBtnTranslate) {
+  destination.textContent = '';
+  destination.textContent = 'Translation in progress...';
+  try {
+    translator(yourText, destination, url, writeTranslationResult, idBtnTranslate);
+  } catch (error) {
+    destination.textContent = 'Error';
+  }
+}
+
+function restrictMaxCharactersinTextarea() {
+  document.querySelectorAll('.content.source').forEach(textarea => {
+    textarea.addEventListener('input', e => {
+      let yourText = e.target.textContent;
+      if (yourText.length > config.maxCharactersPerTranslation) {
+        yourText = yourText.substring(0, config.maxCharactersPerTranslation);
+        const positionOfLastFullStop = yourText.lastIndexOf('.');
+        yourText = yourText.substring(0, positionOfLastFullStop + 1);
+        e.target.textContent = yourText;
+      }
+    });
+  });
+}
+
+function writeTranslationResult(result, destination, idBtnTranslate) {
+  destination.textContent = result;
+  spinningWheel(idBtnTranslate, false);
+}
+
+function spinningWheel(idBtnTranslate, show) {
+  const wheel = document.getElementById('spinningWheel');
+  const btnTranslate = document.getElementById(idBtnTranslate);
+  if (show) {
+    wheel.classList.remove('hide');
+    btnTranslate.disabled = true;
+  } else {
+    wheel.classList.add('hide');
+    btnTranslate.disabled = false;
+  }
+}
+
+document.querySelectorAll('[contenteditable]').forEach(textarea => {
+  textarea.addEventListener('paste', e => {
+    let clipboardData;
+    let pastedData;
+
+    // Stop data actually being pasted into div
+    e.stopPropagation();
+    e.preventDefault();
+
+    // Get pasted data via clipboard API
+    clipboardData = e.clipboardData || window.clipboardData;
+    pastedData = clipboardData.getData('Text');
+    textarea.textContent += pastedData;
+  });
+});
+
+function bindClearButton() {
+  document.querySelectorAll('.clearButton').forEach(clearButton => {
+    clearButton.addEventListener('click', e => {
+      e.target.closest('.pattern').querySelector('.content').textContent = '';
+    });
+  });
+}
+
+(function transliterate() {
+  google.load('elements', '1', {
+    packages: 'transliteration'
+  });
+
+  function onLoad() {
+    const options = {
+      sourceLanguage: google.elements.transliteration.LanguageCode.ENGLISH,
+      destinationLanguage: [google.elements.transliteration.LanguageCode.MALAYALAM],
+      transliterationEnabled: true
+    };
+    const control = new google.elements.transliteration.TransliterationControl(options);
+    control.makeTransliteratable(['transliterate']);
+  }
+
+  google.setOnLoadCallback(onLoad);
+})(google);
+
+const isMobile = {
+  Android() {
+    return navigator.userAgent.match(/Android/i);
+  },
+  BlackBerry() {
+    return navigator.userAgent.match(/BlackBerry/i);
+  },
+  iOS() {
+    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+  },
+  Opera() {
+    return navigator.userAgent.match(/Opera Mini/i);
+  },
+  Windows() {
+    return navigator.userAgent.match(/IEMobile/i);
+  },
+  any() {
+    return (
+      isMobile.Android() ||
+      isMobile.BlackBerry() ||
+      isMobile.iOS() ||
+      isMobile.Opera() ||
+      isMobile.Windows()
+    );
+  }
+};
+
+if (isMobile.any()) {
+  document.querySelector('[data-section="transliterate"] .message').textContent =
+    'Transliterate feature is currently available only on Desktop browsers. Let me know if you would like this feature on your mobile device.';
+  document.querySelector('[data-section="transliterate"] article').remove();
+}
